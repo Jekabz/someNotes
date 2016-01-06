@@ -48,8 +48,8 @@ route -n
 ssh-keygen -t rsa
 ssh-copy-id haze@192.168.2.110
 ssh-add
-ssh haze@192.168.2.110 -p 15
-ssh haze@46.109.93.143 -p 15
+ssh haze@192.168.2.110 -p <port>
+ssh haze@<router_ip> -p <port>
 
 #kill ssh:
 sudo netstat -tnpa | grep ESTABLISHED.*sshd
