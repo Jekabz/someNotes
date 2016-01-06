@@ -53,7 +53,9 @@ returning a new collection of the same type. Compiler translates this in a serie
 "filter" calls. 
 ###########  <FOR LOOP>  #############
 for(<variablename> <- <startvalue> to <endvalue> <additional if expression>) {<do something>}
+```
 for(x <- 1 to 100 if x%10==0) println(x)
+```
 ###########  </FOR LOOP> #############
 ###########  </SCALA LOOPING> ##############
 
