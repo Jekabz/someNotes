@@ -1,32 +1,31 @@
-#############################################  <SCALA>  #############################################
+# SCALA
+=======
 
-############ <FUNCTIONAL PROGRAMMING KNOWLEDGE BLOCK>  ##############################################
+## FUNCTIONAL PROGRAMMING KNOWLEDGE BLOCK 
+=========================
 
-########### <LAMBDA FUNCTION>  ############
+###### LAMBDA FUNCTION
 lambda function can access variables within the scope of function declaring block
 lambda funcions are used to contain functionality that need not be named and possibly for short term usage
 lambda function can always be substituted with named function, their use is a question of code style
-########### </LAMBDA FUNCTION>  ############
 
-###########  <CURRYING>  ###################
+###### CURRYING
 currying is a technique to translate the evaluation of a function that takes multiple args, to multiple
 functions, that each take one arg
-###########  </CURRYING> ###################
 
-###########  <CLOSURE>  ####################
+###### CLOSURE
 //TODO
-###########  </CLOSURE> ####################
 
-###########  <LAZY EVALUATION> #############
+###### LAZY EVALUATION
 aka non-strict evaluation
 Evaluation is strict by default
 With lazy evaluation, variable will be evaluated with the first time that it is referenced
 Lazy collections are also available
-########### </LAZY EVALUATION> #############
 
-############ </FUNCTIONAL PROGRAMMING KNOWLEDGE BLOCK>  ##############################################
+============================
 
-###########  <OVERALL SCALA KNOWLEDGE>  ####
+# OVERALL SCALA KNOWLEDGE
+============================
 Scala runs on JVM, scala is well suited for Android dev
 Scala can compile on JS, so its possible to run scala apps in browser
 ###########  </OVERALL SCALA KNOWLEDGE> ####
