@@ -20,7 +20,7 @@ Evaluation is strict by default
 With lazy evaluation, variable will be evaluated with the first time that it is referenced
 Lazy collections are also available
 
-## OVERALL SCALA KNOWLEDGE
+## OVERALL SCALA KNOWLEDGE BLOCK
 Scala runs on JVM, scala is well suited for Android dev
 Scala can compile on JS, so its possible to run scala apps in browser
 
@@ -44,7 +44,6 @@ All types inherit from top level class "Any"
 expressions with "yield" keyword allow generating of a new collection, by iterating over an existing one,
 returning a new collection of the same type. Compiler translates this in a series of "map", "flatmap" and
 "filter" calls. 
-===============
 for(\<variablename\> \<- \<startvalue\> to \<endvalue\> \<additional if expression\>) {\<do something\>}
 ```
 for(x <- 1 to 100 if x%10==0) println(x)
