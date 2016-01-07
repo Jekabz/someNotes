@@ -1,8 +1,7 @@
 SPARK KNOWLEDGE
 ===============
 
-OVERALL:
---------
+######OVERALL:
 
 * First tihing in every spark programm is to make sparkContext object, which tells spark how to access a cluster, in Scala, this is sc variable, created automatically
 * Spark context is used, to create other variables
@@ -11,16 +10,15 @@ scala>sc
 res: spark.SparkContext = spark.SparkContext@something
 ```
 
-MASTER:
--------
+######MASTER:
+
 * master parameter for sc determines, which cluster to use: local[x] -- `x use worker threads`
 * connects to cluster manager, to allocate resources across apps
 * acquires executors on cluster nodes -- `executors run processes and stores data`
 * sends app code to executors
 * sends tasks for executors to run
 
-RDDs:
------
+######RDDs:
 
 * RDDs can only be created through deterministic operations on data or other RDDs
 * fault tolerant collection of elements, that can be oprated on in parallel
@@ -42,8 +40,8 @@ val distData = sc.parallelize(data)
 val distFIle = sc.textFile("foo.txt")
 ```
 
-TRANSFORMATIONS:
-----------------
+######TRANSFORMATIONS:
+
 
 * Transformations create a new dataset from existing one
 * All transformations are lazy, but Scala collections are strict
@@ -71,8 +69,8 @@ val distFIle = sc.textFile("foo.txt") #collection of lines
 distFile.map(l => l.split(" ")).collect()
 ```
 
-ACTIONS:
---------
+######ACTIONS:
+
   * reduce (func)
   * collect() --`returns all elem of dataset as arr, used after a command that returns small subset of data`
   * count()
@@ -90,8 +88,7 @@ val words = f.flatMap(l => l.split(" ")).map(word => (word, 1))
 words.reduceByKey(_+_).collect.foreach(println)
 ```
 
-PERSISTANCE:
-------------
+######PERSISTANCE:
 
 * Spark can can cache dataset in memory across operations
 * Node stores slices of datasets that it works on, for future reuse
@@ -105,8 +102,7 @@ PERSISTANCE:
   * MEMORY_ONLY_2, --`Same as MEMORY_ONLY, but replicates each partition on two cluster nodes`
   * MEMORY_AND_DISC_2 --`Same deal`
 
-BROADCAST VARIABLES:
---------------------
+######BROADCAST VARIABLES:
 
 * Broadcast var is read only var cached on each machine, not shipped in with tasks
 * Could give each node a copy of large dataset efficiently
@@ -117,8 +113,7 @@ val broadcastVal = sc.broadcast(Array(1, 2, 3))
 broadcastVar.value
 ```
 
-ACCUMULATORS:
--------------
+######ACCUMULATORS:
 
 * Accumulators are variables, that can only be changed with associative (+, -, etc) operation
 * Accumulators efficiently implement in parallel counters and sums
@@ -130,8 +125,8 @@ sc.parallelize(Array(1, 2, 3)).foreach(x => acc +=x)
 accum.value
 ```
 
-(K,V) PAIRS:
-------------
+######(K,V) PAIRS:
+
 
 ```scala
 val pair = (a, b)
@@ -139,11 +134,11 @@ pair._1 //=>a
 pair._2 //=>b
 ```
 
-SPARK SQL:
-----------
+######SPARK SQL:
 
-SPARK STREAMING:
-----------------
+//TODO
+
+######SPARK STREAMING:
 
 * Extends core API to allow high throughput, fault tolerant sream processing on live datastreams
 * Ingests from Kafka, Flume, etc.
