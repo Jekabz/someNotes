@@ -3,9 +3,9 @@
 ## FUNCTIONAL PROGRAMMING KNOWLEDGE BLOCK 
 
 ###### LAMBDA FUNCTION
-lambda function can access variables within the scope of function declaring block
-lambda funcions are used to contain functionality that need not be named and possibly for short term usage
-lambda function can always be substituted with named function, their use is a question of code style
+* lambda function can access variables within the scope of function declaring block
+* lambda funcions are used to contain functionality that need not be named and possibly for short term usage
+* lambda function can always be substituted with named function, their use is a question of code style
 
 ###### CURRYING
 currying is a technique to translate the evaluation of a function that takes multiple args, to multiple
@@ -25,6 +25,7 @@ Scala runs on JVM, scala is well suited for Android dev
 Scala can compile on JS, so its possible to run scala apps in browser
 
 ###### HELLO WORLD EXAMPLE
+
 ```scala
 object HelloWorld extends App{
     println("HAI!")
@@ -32,6 +33,7 @@ object HelloWorld extends App{
 ```
 ###### SCALA INTERPRETER
 commands can be interpreted with -e option
+
 ```
 $ scala -e 'println("HAI")'
 ```
@@ -44,13 +46,14 @@ All types inherit from top level class "Any"
 expressions with "yield" keyword allow generating of a new collection, by iterating over an existing one,
 returning a new collection of the same type. Compiler translates this in a series of "map", "flatmap" and
 "filter" calls. 
+
 ```
-for(\<variablename\> \<- \<startvalue\> to \<endvalue\> \<additional if expression\>) {\<do something\>}
+for(<variablename> <- <startvalue> to <endvalue> <additional if expression>) {<do something>}
 ```
+
 ```
 for(x <- 1 to 100 if x%10==0) println(x)
 ```
-===============
 
 ###### FUNCTION RETURNS
 Return statement are unnecessary and discouraged in Scala
