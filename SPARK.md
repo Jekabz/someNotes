@@ -1,19 +1,15 @@
-##########################################################################
-			SPARK KNOWLEDGE
-##########################################################################
+# SPARK KNOWLEDGE
 
-* First tihing in every spark programm is to make sparkContext object, which 
-tells spark how to access a cluster, in Scala, this is sc variable, created
-automatically
+######OVERALL:
+* First tihing in every spark programm is to make sparkContext object, which tells spark how to access a cluster, in Scala, this is sc variable, created automatically
 * Spark context is used, to create other variables
 * scala>sc
   res: spark.SparkContext = spark.SparkContext@something
 
-#########################  MASTER  ######################################
-* master parameter for sc determines, which cluster to use: local[x] #x use worker threads
-
+###### MASTER:
+* master parameter for sc determines, which cluster to use: local[x] -- `x use worker threads`
 * connects to cluster manager, to allocate resources across apps
-* acquires executors on cluster nodes #executors run processes and stores data
+* acquires executors on cluster nodes //executors run processes and stores data
 * sends app code to executors
 * sends tasks for executors to run
 

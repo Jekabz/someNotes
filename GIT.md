@@ -65,15 +65,15 @@ git pull #optional
 git push
 ```
 
-*overwrite unneeded changes in my local repo with remote repo, that also has some changes in it:
+* overwrite unneeded changes in my local repo with remote repo, that also has some changes in it:
 
 ```
 git stash save --keep-index
 git stash drop
 ```
-
-#git stash takes the dirty state of the project and saves it on a stack of unsaved changes that can be reappied at any time
-#all stashes are saved on a stack, and they have a number {{0},{1},...,{n}}
+* git stash takes the dirty state of the project and saves it on a stack of unsaved changes that can be reappied at any time
+* all stashes are saved on a stack, and they have a number {{0},{1},...,{n}}
+```
 git stash #saves the "dirty" changes
 git stash list #shows stashes on stack
 git stash apply #applies the last stashed changes
@@ -81,4 +81,6 @@ git stash apply stash@{2} #applies changes in {2} stash
 git stash drop #will drop the latest (?) saved stash
 git stash drop stash@{n} #remves the {n} stash from stack
 git stash pop #applies the stash and immediately drops it from the stack
+```
+=========================
 
