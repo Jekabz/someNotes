@@ -1,4 +1,5 @@
-# SCALA
+SCALA
+=====
 
 ## FUNCTIONAL PROGRAMMING KNOWLEDGE BLOCK 
 
@@ -66,5 +67,4 @@ for(x <- 1 to 100 if x%10==0) println(x)
 * Method names ending with ':' expect arg on left side, reciever on right side
 * Scala makes no distinction between statement and expression Instead, all statements are expressions
 
-============================
 

@@ -1,71 +1,112 @@
-########CONTROL_OS###################
+BASH
+====
 
-#find out 
+######find out OS version:
+
+```
 cat /proc/version
+```
 
-#find out number of threads:
+######find out number of threads:
+
+```
 nproc
+```
 
-#search for file:
+######search for file:
 
+```
 find / -name <filename>
+```
 
-#execute .sh files from current directory:
+######execute .sh files from current directory:
+
+```
 ./filename #runs in terminal
+```
 
-#bashrc
+######bashrc:
+
+```
 vim ~/.bashrc
 source ~/.bashrc #applies bashrc for current terminal session
+```
 
-#runs whatever command
+######runs whatever command:
+
+```
 alt+f2
+```
 
+```
 cd ~/whateverfoldername
+```
+######newest filename in directory, cast to string:
 
-#newest filename in directory, cast to string
+```
 foo=$(ls -t | head -1)
+```
 
-#check process existance:
+######check process existance:
+
+```
 eval "$(<process> -s)"
 service <process> status
+```
 
-#poweroff pc:
+######poweroff pc:
+
+```
 sudo poweroff
-########## WORKING WITH SERVICES#####
+```
+######WORKING WITH SERVICES:
 
+```
 service <name> status
 service <name> start
 service <name> stop
 service <name> restart
+```
 
-########NETWORKING###################
+######NETWORKING:
 
+```bash
 #find out router adress
 route -n
+```
 
-########SSH_INSTRUCTIONS#############
+######SSH_INSTRUCTIONS
 
+```
 ssh-keygen -t rsa
 ssh-copy-id haze@192.168.2.110
 ssh-add
 ssh haze@192.168.2.110 -p <port>
 ssh haze@<router_ip> -p <port>
+```
 
-#kill ssh:
+* kill ssh:
+
+```
 sudo netstat -tnpa | grep ESTABLISHED.*sshd
 pkill -o -u haze sshd
+```
 
-########CASSANDRA_INSTRUCTIONS#######
+######CASSANDRA_INSTRUCTIONS:
 
-#run cassandra:
+* run cassandra:
+```
 $CASSANDRA_HOME=/home/haze/apache-cassandra-2.2.1/bin
 cd $CASSANDRA_HOME
 sudo ./bin/cassandra -f
+```
 
-#run cqlsh:
+* run cqlsh:
+```
 $CASSANDRA_HOME=/home/haze/apache-cassandra-2.2.1/bin
 cd $CASSANDRA_HOME
 ./cqlsh
+```
 
 
 

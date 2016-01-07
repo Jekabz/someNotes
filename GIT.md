@@ -1,23 +1,21 @@
 GIT INSTRUCTIONS
 ================
 
-GIT CONFIG:
------------
+######GIT CONFIG:
 
 ```bash
 git config --global user.name "name-surname"
 ```
 
-CREATE NON BARE REPO IN WORKING DIRECTORY:
-------------------------------------------
+######CREATE NON BARE REPO IN WORKING DIRECTORY:
 
 ```bash
 git init
 git remote add <project_name or origin> <ssh or web address>
 git clone <ssh or web address> #no real need for this
 ```
-GITIGNORE:
-----------
+######GITIGNORE:
+
 * set up .gitignore:
 
 ```bash
@@ -36,8 +34,7 @@ $ cat.gitignore
 <filename> #ignores file with filename
 <filename>* #ignores filename with any extenson
 ```
-GIT ACTIONS:
-------------
+######GIT ACTIONS:
 
 * show changes in project directory:
 
