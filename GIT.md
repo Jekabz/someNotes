@@ -1,17 +1,24 @@
-#########GIT_INSTRUCTIONS############
+# GIT_INSTRUCTIONS
 
-#configure git:
+######GIT CONFIG
+
+```bash
 git config --global user.name "name-surname"
+```
 
-#create non bare rep in your directory:
+######CREATE NON BARE REPO IN WORKING DIRECTORY
+```bash
 git init
 git remote add <project_name or origin> <ssh or web address>
 git clone <ssh or web address> #no real need for this
-
-# set up .gitignore:
+```
+######GITIGNORE
+* set up .gitignore:
+```bash
 touch .gitignore
+```
 
-# .gitignore contents:
+* .gitignore contents:
 $ cat.gitignore
 
 <fodername>/ #will ignore any folder with foldername
