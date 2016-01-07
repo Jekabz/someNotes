@@ -40,11 +40,13 @@ $ scala -e 'println("HAI")'
 All types inherit from top level class "Any"
 "Any" immediate childer are "Anyval" {variables like int, bool etc} and "AnyRef" {reference types}
 
-####### SCALA LOOPING
+###### SCALA LOOPING
 expressions with "yield" keyword allow generating of a new collection, by iterating over an existing one,
 returning a new collection of the same type. Compiler translates this in a series of "map", "flatmap" and
 "filter" calls. 
+```
 for(\<variablename\> \<- \<startvalue\> to \<endvalue\> \<additional if expression\>) {\<do something\>}
+```
 ```
 for(x <- 1 to 100 if x%10==0) println(x)
 ```
