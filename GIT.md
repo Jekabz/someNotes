@@ -1,53 +1,77 @@
-# GIT_INSTRUCTIONS
+# GIT INSTRUCTIONS
 
-######GIT CONFIG
+######GIT CONFIG:
 
 ```bash
 git config --global user.name "name-surname"
 ```
 
-######CREATE NON BARE REPO IN WORKING DIRECTORY
+######CREATE NON BARE REPO IN WORKING DIRECTORY:
+
 ```bash
 git init
 git remote add <project_name or origin> <ssh or web address>
 git clone <ssh or web address> #no real need for this
 ```
-######GITIGNORE
+######GITIGNORE:
 * set up .gitignore:
+
 ```bash
 touch .gitignore
 ```
-
 * .gitignore contents:
-$ cat.gitignore
 
+```bash
+$ cat.gitignore
+```
+* gitignore wildcards:
+
+```
 <fodername>/ #will ignore any folder with foldername
 *.<extension> #ignores all files with this extension
 <filename> #ignores file with filename
 <filename>* #ignores filename with any extenson
+```
+######GIT ACTIONS:
 
-#show changes in project directory:
+* show changes in project directory:
+
+```
 git status
+```
+* if unwanted file is trackded (shows up in git status):
 
-#if unwanted file is trackded (shows up in git status):
+```
 git rm --cached <file>
+```
+* add needed changes to Index:
 
-#add needed changes to Index:
+```
 git add <filename>
 git add -A #adds all files
+```
 
-#commit to Head (not remote repo):
+* commit to Head (not remote repo):
+
+```
 git commit -m "Commit message"
+```
 
-#commit to remote repo:
-git branch --set-upstream-to=origin/master master #do the first time
-git pull
+* commit to remote repo:
+
+```
+git branch --set-upstream-to=origin/master master #do the first time (?)
+git pull #optional
 git push
+```
 
-#overwrite unneeded changes in my local repo with remote repo, that also has
-#some changes in it:
+*overwrite unneeded changes in my local repo with remote repo, that also has some changes in it:
+
+```
 git stash save --keep-index
 git stash drop
+```
+
 #git stash takes the dirty state of the project and saves it on a stack of unsaved changes that can be reappied at any time
 #all stashes are saved on a stack, and they have a number {{0},{1},...,{n}}
 git stash #saves the "dirty" changes
