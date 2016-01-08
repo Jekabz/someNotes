@@ -62,5 +62,15 @@
 * Will be replaced by JavaFX
 
 ###### GENERICS
+* generics:
+* 
+```java
+List<String> v = new ArrayList<>();
+v.add("test");
+Integer i = v.get(0); // (type error)  compilation-time error
+```
+* no generics
+
+```
 
 
