@@ -59,9 +59,24 @@ for(x <- 1 to 100 if x%10==0) println(x)
 * Instead, the last expression in a block of code is the value of that code block, if the code block is a body of a function, this value will be returned by function
 
 ###### IMMUTABILITY
-* Value of IMMUTABLE variable cannot be changed assignment, they are declared with "val"
-* Value of MUTABLE variable can be changed after assignment, they are declared with "var"
+* Value of IMMUTABLE variable cannot be changed after assignment, they are declared with `val`
+* Value of MUTABLE variable can be changed after assignment, they are declared with `var`
 * Same with any object, lists, arrays, sets and hashtables can be mutable or immutable
+
+###### VARIABLE TYPE INFERECE
+* Scala compiler can figure out the type of variable by its value
+* The following are therefore equal:
+
+```scala
+var foo : Int = 10
+var foo = 10
+```
+
+###### MULTIPLE ASSIGNMENTS
+```scala
+val (foo: Int, bar: String) = Pair(2, "FooBar")
+val (foo, bar) = Pair(2, "FooBar")
+```
 
 ###### WIERD STUFF
 * Method names ending with ':' expect arg on left side, reciever on right side
