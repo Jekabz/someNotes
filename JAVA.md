@@ -1,6 +1,7 @@
 #JAVA
 * Compiled bytecode can run on any JVM, reghardless of computer architecture
 * JVM translates bytecode to platforms's machine language
+* Everything is an object, except for primitive data types
 
 ###### JAVA BYTECODE
 
@@ -12,6 +13,7 @@
 
 ###### JVM
 
+
 * Virtual computer
 * Catches common programming errors, like going past the end of array or using null pointer
 * Before executing, JVM verifies the bytecode:
@@ -20,13 +22,35 @@
   * Access to `private` or `package private` data and methods is rigidly controlled
 * How bytecode interpreter and just in time compiler are implemented, depends on JVM implementation
 
-##### JAVA BYTECODE INTERPRETER
+###### JAVA BYTECODE INTERPRETER
 
 * For each hardware architecture, different Java bytecode interpreter is needed
 * Code execution by java bytecode interpreter is always slower than execution of the same programm compiled in native machine language
 
-##### JUST IN TIME COMPILER
+###### JUST IN TIME COMPILER
 
 * Translates Java bytecode in native machine language while running the programm
 * Faster than interpreter
 * This technique is applied to parts of programm that are frequently executed
+
+###### JAVA APPLETS
+
+* runs in rectangle region in browser
+* Browser support will end very soon
+ 
+###### JDK
+
+* Implementation of either  `Java SE`, `Java EE`, or `Java ME` platforms
+* software development kit, has tools like:
+  * javac
+  * javadoc
+  * jar
+  * others
+* It gots JRE with extra compinnents in it
+
+###### MEMORY MANAGEMENT
+
+* gots garbage collector
+* garbage collection can happen at any time
+* no pointer arithmetics
+* There are several types of garbage collectors
