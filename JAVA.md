@@ -1,0 +1,24 @@
+#JAVA
+* Compiled bytecode can run on any JVM, reghardless of computer architecture
+* JVM translates bytecode to platforms's machine language
+###### JAVA BYTECODE
+* Does not directly support floating point operations beyond 32bits
+* Bytecode has a lot of goto's in it
+* There are several compilers that translate Java code to bitecode, beyont hte standart `javac`
+* `GNU Compiler for Java` directly compiles Java source to machine instructions
+* Platform independent
+###### JVM
+* Virtual computer
+* Catches common programming errors, like going past the end of array or using null pointer
+* Before executing, JVM verifies the bytecode:
+  * Branches are always to valid locations
+  * Datas is initialized and references are type - safe
+  * Access to `private` or `package private` data and methods is rigidly controlled
+* How bytecode interpreter and just in time compiler are implemented, depends on JVM implementation
+##### JAVA BYTECODE INTERPRETER
+* For each hardware architecture, different Java bytecode interpreter is needed
+* Code execution by java bytecode interpreter is always slower than execution of the same programm compiled in native machine language
+##### JUST IN TIME COMPILER
+* Translates Java bytecode in native machine language while running the programm
+* Faster than interpreter
+* This technique is applied to parts of programm that are frequently executed
