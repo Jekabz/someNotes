@@ -54,3 +54,13 @@
 * garbage collection can happen at any time
 * no pointer arithmetics
 * There are several types of garbage collectors
+
+###### SWING
+
+* gui library for Java SE
+* Swing components are not implemented by platform-specific code, therefore they are called **lightweiht**
+* Will be replaced by JavaFX
+
+###### GENERICS
+
+
