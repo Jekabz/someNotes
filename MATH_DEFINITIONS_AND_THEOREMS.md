@@ -51,9 +51,9 @@ Virkni sauc par konverģentu, ja tai eksistē galīga virknes robeža, ja šī r
 ###### Nenegativu skaitļu rinda
 ###### Alternējoša skaitļu rinda
 
-```
+
 Rindu ∑<sup>∞</sup><sub>n=1</sub> an sauc par alternējošu rindu, ja tās locekļu zīmes pēc kārtas mainās.
-```
+
 ###### Maiņzīmju rinda
 ###### Absolūti konverģenta rinda
 ###### Nosaciti konvergenta rinda
