@@ -30,6 +30,10 @@ Ietver sevī pirmā un otrā veida neīstos integrāļus. Lai aprēķinātu šā
 Visur definētu funkciju f: N -> R vai f: N -> C, sauc par kopas R vai C elementu skaitļu virkni
 ```
 ###### Skaitļu virknes robeža
+
+```
+Skaitli a sauc par virknes (a<sub>n</sub>) robežu (vai arī virkne (a<sub>n</sub>) konverģē uz skaitli a, ja katram pozitīvam skaitlim ε eksistē tāds pozitīvs skaitlis δ, ka visiem virknes (a<sub>n</sub>) elementiem a<sub>n</sub> izpildās nosacījums: ja n>δ, tad a<sub>n</sub>єU(a,ε). Ar simboliem – lim (n→∞)a<sub>n</sub>=a <=> ¥ε>0 Eδ>0 ¥nєN [n>δ→a<sub>n</sub>єU(a,ε)].
+```
 ###### Konverģenta / diverģenta virkne
 
 ```
@@ -39,9 +43,17 @@ Virkni sauc par konverģentu, ja tai eksistē galīga virknes robeža, ja šī r
 ###### Rindas parcialsumma
 ###### Konverģenta / diverģenta rinda
 ###### Harmoniska rinda
+
+```
+∑<sub>n=∞</sub> 1/n
+```
 ###### Visparinata harmoniska rinda
 ###### Nenegativu skaitļu rinda
 ###### Alternējoša skaitļu rinda
+
+```
+Rindu ∑<sup>∞</sup><sub>n=1</sub> an sauc par alternējošu rindu, ja tās locekļu zīmes pēc kārtas mainās.
+```
 ###### Maiņzīmju rinda
 ###### Absolūti konverģenta rinda
 ###### Nosaciti konvergenta rinda
