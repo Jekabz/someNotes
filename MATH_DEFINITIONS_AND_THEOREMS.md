@@ -133,7 +133,7 @@ Ekstrēmu sauc par funkcijas z=f(x,y) nosacīto ekstrēmu, ja mainīgie x un y n
 
 ###### Divkarsais integralis
 
-Pieņemsim, ka ir definēta 2-argumentu funkcija slēgtā taisnstūrī R={(x,y)|a<=x<=b, c<=y<=d}. Ja lim<sub>|P|→0<sub>­∑<sup>n</sup><sub>i=1</sub>f(x<sup>-</sup><sub>i</sub>, y<sup>-</sup><sub>i</sub>)*∆L<sub>i</sub> eksistē, tad funkcija z=f(x,y) ir integrējama taisnstūrī R un šo summas robežu sauc par funkcijas f divkāršo integrāli taisnstūrī R: ∫∫R f(x,y)dL=lim<sub>|P|→0<sub>­∑<sup>n</sup><sub>i=1</sub>f(x<sup>-</sup><sub>i</sub>, y<sup>-</sup><sub>i</sub>)*∆L<sub>i</sub>.
+Pieņemsim, ka ir definēta 2-argumentu funkcija slēgtā taisnstūrī R={(x,y)|a<=x<=b, c<=y<=d}. Ja lim<sub>|P|→0</sub>­∑<sup>n</sup><sub>i=1</sub>f(x<sup>-</sup><sub>i</sub>, y<sup>-</sup><sub>i</sub>)*∆L<sub>i</sub> eksistē, tad funkcija z=f(x,y) ir integrējama taisnstūrī R un šo summas robežu sauc par funkcijas f divkāršo integrāli taisnstūrī R: ∫∫R f(x,y)dL=lim<sub>|P|→0<sub>­∑<sup>n</sup><sub>i=1</sub>f(x<sup>-</sup><sub>i</sub>, y<sup>-</sup><sub>i</sub>)*∆L<sub>i</sub>.
 
 ###### Regulara pec (x vai y) kopa S C R^2
 
@@ -186,7 +186,7 @@ ja k=1, tad šis tests atbildi nedod.
 
 ###### Integralais kriterijs
 
-(Ar integrālo testu pierāda vispārinātās harmoniskās rindas konv/div) Pieņemsim, ka funkcija f ir nepārtraukta, pozitīva, monotoni dilstoša intervālā [a;+ ∞) un a<sub>n<sub>=f(n) ¥n pieder N (sākot no a), a pieder N. Tad:
+(Ar integrālo testu pierāda vispārinātās harmoniskās rindas konv/div) Pieņemsim, ka funkcija f ir nepārtraukta, pozitīva, monotoni dilstoša intervālā [a;+ ∞) un a<sub>n</sub>=f(n) ¥n pieder N (sākot no a), a pieder N. Tad:
 * ja konverģē neīstais integrālis ∫<sup>+∞</sup>a f(x) dx, tad konverģē arī rinda ∑<sup>+∞</sup><sub>n=a</sub> a<sub>n</sub>;
 * ja diverģē neīstais integrālis ∫<sup>+∞</sup>a f(x) dx, tad diverģē arī rinda ∑<sup>+∞</sup><sub>n=a</sub> a<sub>n</sub>.
 
@@ -198,7 +198,7 @@ lim<sub>n→∞</sub> a<sub>n</sub>=0, tad rinda konverģē. Un 0<S<a<sub>1</sub
 
 ###### Absolutais konverģences kriterijs
 
-ja konverģē rinda ∑<sup>∞</sup><sub>n=1</sub>|a<sub>n</sub>|, tad konverģē arī ∑<sup>∞>/sup><sub>n=1</sub>a<sub>n</sub>.
+ja konverģē rinda ∑<sup>∞</sup><sub>n=1</sub>|a<sub>n</sub>|, tad konverģē arī ∑<sup>∞</sup><sub>n=1</sub>a<sub>n</sub>.
 
 ###### Dalambera kriterijs maiņzīmju rindai
 
