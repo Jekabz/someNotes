@@ -12,7 +12,7 @@ git config --global user.name "name-surname"
 ```bash
 git init
 git remote add <project_name or origin> <ssh or web address>
-git clone <ssh or web address> #no real need for this
+git clone <ssh or web address> #no real need for this, but it sets branch tracking automatically
 ```
 ######GITIGNORE:
 

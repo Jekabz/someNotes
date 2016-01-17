@@ -82,7 +82,7 @@ ssh-keygen -t rsa
 ssh-copy-id haze@192.168.2.110
 ssh-add
 ssh haze@192.168.2.110 -p <port>
-ssh haze@<router_ip> -p <port>
+ssh haze@<router_ip> -p <port>http://www.textchat.dev/
 ```
 
 * kill ssh:
@@ -107,6 +107,23 @@ $CASSANDRA_HOME=/home/haze/apache-cassandra-2.2.1/bin
 cd $CASSANDRA_HOME
 ./cqlsh
 ```
+
+######HOSTS_FILE
+
+* etc/hosts
+* ip_addrese atstarpe hostname
+
+######SCP
+
+* transfers files
+* -r option for folders
+
+```
+scp [options] /local/path user@adress:/remote/path
+```
+
+
+
 
 
 
