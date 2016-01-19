@@ -1,20 +1,20 @@
 GIT INSTRUCTIONS
 ================
 
-######GIT CONFIG:
+####GIT CONFIG:
 
 ```bash
 git config --global user.name "name-surname"
 ```
 
-######CREATE NON BARE REPO IN WORKING DIRECTORY:
+####CREATE NON BARE REPO IN WORKING DIRECTORY:
 
 ```bash
 git init
 git remote add <project_name or origin> <ssh or web address>
 git clone <ssh or web address> #no real need for this, but it sets branch tracking automatically
 ```
-######GITIGNORE:
+####GITIGNORE:
 
 * set up .gitignore:
 
@@ -34,7 +34,7 @@ $ cat.gitignore
 <filename> #ignores file with filename
 <filename>* #ignores filename with any extenson
 ```
-######GIT ACTIONS:
+####GIT ACTIONS:
 
 * show changes in project directory:
 
@@ -84,11 +84,43 @@ git stash drop #will drop the latest (?) saved stash
 git stash drop stash@{n} #remves the {n} stash from stack
 git stash pop #applies the stash and immediately drops it from the stack
 ```
-###### PULL REQUEST
+#### PULL REQUEST
 * A request for another developer to pull a branch from my repo into their repo
 * Pull request is a mechanism for developer to notify other teammembers that a feature **(worked on in a non-master branch)** is completed
 * Pull requests lets to discuss the proposed feature
 * Inside pull request, activity such as feedback and follow-up commits, is tracked
 * When feature is accepted by project maintainer, it is merged in official repo and pull request is closed
+
+#### GIT USING BRANCHES
+##### GIT BRANCCH
+* Independent line of development
+* To encapsulate any changes, new work is done in a new branch, so unstable branch is never commited to a master branch
+
+* List all branches in my repo:
+
+```
+git branch
+```
+* Create a new branch:
+
+```
+git branch <new branch name>
+```
+* delete branch, but it prevents deleting branch with unmerged changes:
+
+```
+git branch -d <branch name> 
+```
+* Force delete branch:
+
+```
+git branch -D <branch name>
+```
+* Rename branch:
+
+```
+git branch -m <new branch name>
+```
+
 
 
