@@ -89,7 +89,6 @@ git stash pop #applies the stash and immediately drops it from the stack
 * Pull request is a mechanism for developer to notify other teammembers that a feature **(worked on in a non-master branch)** is completed
 * Pull requests lets to discuss the proposed feature
 * Inside pull request, activity such as feedback and follow-up commits, is tracked
-```
-//todo
-```
+* When feature is accepted by project maintainer, it is merged in official repo and pull request is closed
+
 
