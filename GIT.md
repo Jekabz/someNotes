@@ -84,4 +84,12 @@ git stash drop #will drop the latest (?) saved stash
 git stash drop stash@{n} #remves the {n} stash from stack
 git stash pop #applies the stash and immediately drops it from the stack
 ```
+###### PULL REQUEST
+* A request for another developer to pull a branch from my repo into their repo
+* Pull request is a mechanism for developer to notify other teammembers that a feature **(worked on in a non-master branch)** is completed
+* Pull requests lets to discuss the proposed feature
+* Inside pull request, activity such as feedback and follow-up commits, is tracked
+```
+//todo
+```
 
