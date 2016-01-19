@@ -1,6 +1,10 @@
 GIT INSTRUCTIONS
 ================
 
+#### GIT STAGING AREA:
+
+* Buffer between working directory and project history
+* Staging allows to group related changes before `commit`ing them to project history
 ####GIT CONFIG:
 
 ```bash
@@ -36,7 +40,7 @@ $ cat.gitignore
 ```
 ####GIT ACTIONS:
 
-* show changes in project directory:
+* show changes in project directory and staging area:
 
 ```
 git status
@@ -51,9 +55,10 @@ git rm --cached <file>
 ```
 git add <filename>
 git add -A #adds all files
+git add -p #begins an interactive staging session
 ```
 
-* commit to Head (not remote repo):
+* commit to Head (local repo). Commits the staged snapshot:
 
 ```
 git commit -m "Commit message"
@@ -123,8 +128,13 @@ git branch -D <branch name>
 git branch -m <new branch name>
 ```
 ##### GIT CHECKOUT
-* Navigates between branches
-* Checking out a branch updates the files in the working directory to mach the version stored in that branch and it tells git to record all new commits to that branch
+* Navigates:
+  * Between files
+  * Between commits
+  * Between branches
+* **Checking out a commit** makes entire working directory mach the commit, use it to view old state of project without altering the current state
+* **Checking out a file** lets you see an old version of that particular file, and leaves the rest of your vorking directory untouched
+* **Checking out a branch** updates the files in the working directory to mach the version stored in that branch and it tells git to record all new commits to that branch
 * `git checkout` selects which line of development you want to work on
 
 * Make existing branch the current branch and updates the working directory to mach it:
@@ -142,5 +152,54 @@ git checkout -b <new branch name>
 ```
 git checkout -b <new-branch> <existing branch name>
 ```
+* Development should always take place in a branch never on a `detached HEAD` state
+
+##### GIT MERGE
+* Target branch (branch that is merged in another branch(?))remains unaffected by merge
+* Takes independent lines of development created by `git branch` and integrates them in a single branch (current branch):
+
+```
+git merge
+```
+* To merge `<branch>` into current branch:
+
+```
+git merge <branch>
+```
+* To merge `<branch>` into current branch, and also generate a merge commit:
+
+```
+git merge --no-ff <branch>
+```
+#### UNDOING CHANGES
+
+* Check the previous version of a file:
+
+```
+git checkout <commit> <file> #changes can now be undone by add and commit
+```
+* Generate a new commit that undoes all the changes introduced in ``<commit>`, and then apply that to current branch:
+* Use this to remove an entire commit from project history:
+* Only undoes a single commit, without reverting back to the previous project state:
+
+```
+git revert <commit>
+# This reverts the commit that was just created:
+git revert HEAD
+```
+##### GIT RESET
+
+* Undo changes made in the most current commit, leave working directory unchanged:
+
+```
+git reset <commit> 
+```
+* Remove file from staging area, leave working directory unchanged:
+
+```
+git reset <file>
+```
+
+
 
 
