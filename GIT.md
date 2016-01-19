@@ -95,6 +95,7 @@ git stash pop #applies the stash and immediately drops it from the stack
 ##### GIT BRANCCH
 * Independent line of development
 * To encapsulate any changes, new work is done in a new branch, so unstable branch is never commited to a master branch
+* Branches are just pointers to commits
 
 * List all branches in my repo:
 
@@ -121,6 +122,25 @@ git branch -D <branch name>
 ```
 git branch -m <new branch name>
 ```
+##### GIT CHECKOUT
+* Navigates between branches
+* Checking out a branch updates the files in the working directory to mach the version stored in that branch and it tells git to record all new commits to that branch
+* `git checkout` selects which line of development you want to work on
 
+* Make existing branch the current branch and updates the working directory to mach it:
+
+```
+git checkout <existing branch name>
+```
+* Make new branch based off current branch and then checkout it:
+
+```
+git checkout -b <new branch name>
+```
+* Make new branch based off `<existing branch name>` and then checkout it:
+
+```
+git checkout -b <new-branch> <existing branch name>
+```
 
 
