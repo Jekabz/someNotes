@@ -24,6 +24,11 @@ find / -name <filename>
 ```
 ./filename #runs in terminal
 ```
+######see, where program is installed
+
+```
+which programmName
+```
 
 ######bashrc:
 
