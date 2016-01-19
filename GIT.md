@@ -5,6 +5,7 @@ GIT INSTRUCTIONS
 
 * Buffer between working directory and project history
 * Staging allows to group related changes before `commit`ing them to project history
+
 ####GIT CONFIG:
 
 ```bash
