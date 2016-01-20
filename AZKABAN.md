@@ -6,6 +6,7 @@
   * MySQL database
   * Azkaban web server
   * Azkaban executor server
+  
 ###### Mysql:
 * Azkaban stores its state in MySQL
 * **AzkabanWebServer** uses:
@@ -17,6 +18,17 @@
   * **Access to project** - gets files from db
   * Stores logs
   * etc
+  
 ###### AzkabanWebServer
+
 * Main manager
+
 ###### AzkabanExecutorServer
+
+#### FLOWS
+* Job is a process to be run in Azkaban
+* Graph set up by several jobs and their dependancies makes up a flow
+* **Flow** is a set of jobs, that depends on one another
+* Job can only run after its dependencies
+
+
