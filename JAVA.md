@@ -171,3 +171,6 @@ public class Foo{
 }
 ```
 
+###### IMPORTING JAVA CLASSES
+* By default, `java.lang` is imported in every java programm and so there is no need for seperate import declaration
+
