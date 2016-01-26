@@ -125,6 +125,18 @@ String user = new String("user");
 * `user` is reference to object which contains string "user"
 * reference variables store adress to the object
 
+###### PRIMITIVE TYPES
+
+* A primitive-type variable can store exactly one value of its declared type at a time
+* Primitive-type instance variables are initialized by default. Variables of types byt e, char, short, int, long , float and double are initialized to 0 . Variables of type boolean are initialized to false
+
+###### REFERENCE TYPES
+
+* All nonprimitive objects, like classes
+* Reference-type variables store the location of an object in the comput-
+er’s memory. Such variables refer to objects in the program. The object that’s referenced may contain many instance variables and methods
+* A reference to an object is required to invoke an object’s instance methods. A primitive-type variable does not refer to an object and therefore cannot be used to invoke a method.
+
 ###### JAVA POINTERS
 
 * Java has pointers in form of references, they store memory adress of object
@@ -172,5 +184,35 @@ public class Foo{
 ```
 
 ###### IMPORTING JAVA CLASSES
+
 * By default, `java.lang` is imported in every java programm and so there is no need for seperate import declaration
+
+###### MAIN METHOD
+
+* Any class can contain main() method. JVM only invokes main() that is in the class used to execute the application 
+
+###### PACKAGE
+
+* Classes that are compiled in the same dir. A class in package is implicitly imported in other classes of package, so import declaration is not needed
+
+###### LOCAL VARIABLES 
+
+* Variables declared in a body of a method
+* When method terminates, variable is lost
+
+###### CLASS CONSTRUCTORS
+
+* An important difference between constructors and methods is that constructors
+cannot return values, so they cannot specify a return type (not even void ). Normally, con-
+structors are declared public
+* Keyword new requests memory from the system to store an object, then calls the corresponding class’s constructor to initialize the object.
+
+###### STATIC METHODS
+
+* Define frequently used tasks
+* Static method is called like this:
+
+```java
+classname.methodname(arg);
+```
 
