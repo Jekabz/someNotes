@@ -126,10 +126,15 @@ cd $CASSANDRA_HOME
 ```
 scp [options] /local/path user@adress:/remote/path
 ```
+###### GREP
 
+* Search input fo lines that mach  pattern
 
+###### HERE DOCUMENT
 
+* 
 
+###### '#!/bin/bash' VS '#!/bin/sh'
 
 
 
