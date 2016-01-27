@@ -201,6 +201,13 @@ git reset <commit>
 git reset <file>
 ```
 
+###### GIT FETCH VS GIT PULL
+
+* Locally, a local repo and a copy of remote repo is stored
+* 'git fetch'  brings local copy of remote repo up to date, this never changes any of my own local branches, so it **does not change my working copy**
+* 'git pull' brings the remote repo changes in local repo, where I keep my code, so it **changes my working copy**
+* Normally, 'git pull' first does 'git fetch' adn then merges 'git merge' changes in my local code repo.
+
 
 
 
