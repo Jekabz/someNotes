@@ -19,7 +19,7 @@ git init
 git remote add <project_name or origin> <ssh or web address>
 git clone <ssh or web address> #no real need for this, but it sets branch tracking automatically
 ```
-####GITIGNORE:
+#### GITIGNORE:
 
 * set up .gitignore:
 
@@ -52,7 +52,7 @@ git status
 git rm --cached <file>
 ```
 
-* if unnededfolder is tracked:
+* if unneded folder is tracked:
 
 ```
 git rm -r --cached <foldername>
