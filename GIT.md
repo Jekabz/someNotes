@@ -51,6 +51,13 @@ git status
 ```
 git rm --cached <file>
 ```
+
+* if unnededfolder is tracked:
+
+```
+git rm -r --cached <foldername>
+```
+
 * add needed changes to Index:
 
 ```
