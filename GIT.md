@@ -105,29 +105,18 @@ git stash pop #applies the stash and immediately drops it from the stack
 * When feature is accepted by project maintainer, it is merged in official repo and pull request is closed
 
 #### GIT USING BRANCHES
-##### GIT BRANCCH
+##### GIT BRANCH
 * Independent line of development
 * To encapsulate any changes, new work is done in a new branch, so unstable branch is never commited to a master branch
 * Branches are just pointers to commits
 
-* List all branches in my repo: `git branch`
-* list all branches: `git branch -a`
-* Create a new branch: `git branch <new branch name>`
-* delete branch, but it prevents deleting branch with unmerged changes:
+* List all branches in my repo: **git branch**
+* list all branches: **git branch -a**
+* Create a new branch: **git branch <new branch name>**
+* delete branch, but it prevents deleting branch with unmerged changes: **git branch -d <branch name>**
+* Force delete branch: **git branch -D <branch name>**
+* Rename branch: **git branch -m <new branch name>**
 
-```
-git branch -d <branch name> 
-```
-* Force delete branch:
-
-```
-git branch -D <branch name>
-```
-* Rename branch:
-
-```
-git branch -m <new branch name>
-```
 ##### GIT CHECKOUT
 * Navigates:
   * Between files
