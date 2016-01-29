@@ -110,12 +110,12 @@ git stash pop #applies the stash and immediately drops it from the stack
 * To encapsulate any changes, new work is done in a new branch, so unstable branch is never commited to a master branch
 * Branches are just pointers to commits
 
-* **git branch** -- List all branches in my repo
-* **git branch -a** -- list all branches
-* **git branch <new branch name>** -- Create a new branch
-* **git branch -d <branch name>** -- delete branch, but it prevents deleting branch with unmerged changes
-* `git branch -D <branch name>` -- Force delete branch
-* `fdgit branch -m <new branch name>` -- Rename branch
+  * `git branch` -- *List all branches in my repo*
+  * `git branch -a` -- *list all branches*
+  * `git branch <new branch name>` -- *Create a new branch*
+  * `git branch -d <branch name>` -- *delete branch, but it prevents deleting branch with unmerged changes*
+  * `git branch -D <branch name>` -- *Force delete branch*
+  * `fdgit branch -m <new branch name>` -- *Rename branch*
 
 ##### GIT CHECKOUT
 * Navigates:
