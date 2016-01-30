@@ -125,7 +125,7 @@ git stash pop #applies the stash and immediately drops it from the stack
 * **Checking out a commit** makes entire working directory mach the commit, use it to view old state of project without altering the current state
 * **Checking out a file** lets you see an old version of that particular file, and leaves the rest of your vorking directory untouched
 * **Checking out a branch** updates the files in the working directory to mach the version stored in that branch and it tells git to record all new commits to that branch
-* `git checkout` selects which line of development you want to work on
+  * `git checkout` -- *selects which line of development you want to work on*
 
 * Make existing branch the current branch and updates the working directory to mach it:
 
