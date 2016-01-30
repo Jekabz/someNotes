@@ -118,21 +118,10 @@ git checkout -b <new-branch> <existing branch name>
 ----------------------
 ##### GIT MERGE
 * Target branch (branch that is merged in another branch(?))remains unaffected by merge
-* Takes independent lines of development created by `git branch` and integrates them in a single branch (current branch):
+* `git merge` -- *Takes independent lines of development created by `git branch` and integrates them in a single branch (current branch)*
+* `git merge <branch>` -- *To merge `<branch>` into current branch*
+* `git merge --no-ff <branch>` -- *To merge `<branch>` into current branch, and also generate a merge commit*
 
-```
-git merge
-```
-* To merge `<branch>` into current branch:
-
-```
-git merge <branch>
-```
-* To merge `<branch>` into current branch, and also generate a merge commit:
-
-```
-git merge --no-ff <branch>
-```
 ---------------------
 #### UNDOING CHANGES
 
@@ -152,12 +141,12 @@ git revert HEAD
 ```
 ##### GIT RESET
 
-* `git reset <commit>` -- * Undo changes made in the most current commit, leave working directory unchanged *
-* `git reset <file>`   -- * Remove file from staging area, leave working directory unchanged *
+* `git reset <commit>` -- *Undo changes made in the most current commit, leave working directory unchanged*
+* `git reset <file>`   -- *Remove file from staging area, leave working directory unchanged*
 
 ##### GIT AMEND
 
-* `git commit --amend` -- *takes your staging area and uses it for the commit. If you’ve made no changes since your last commit (for instance, you run this command immediately after your previous commit), then your snapshot will look exactly the same, and all you’ll change is commit message *
+* `git commit --amend` -- *takes your staging area and uses it for the commit. If you’ve made no changes since your last commit (for instance, you run this command immediately after your previous commit), then your snapshot will look exactly the same, and all you’ll change is commit message*
 
 * example workflow: (second commit replaces the first commit):
 
