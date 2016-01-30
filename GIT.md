@@ -6,57 +6,37 @@ GIT INSTRUCTIONS
 * Buffer between working directory and project history
 * Staging allows to group related changes before `commit`ing them to project history
 
-####GIT CONFIG:
+#### GIT CONFIG:
 
 ```bash
 git config --global user.name "name-surname"
 ```
 
-####CREATE NON BARE REPO IN WORKING DIRECTORY:
+#### CREATE NON BARE REPO IN WORKING DIRECTORY:
 
 ```bash
 git init
 git remote add <project_name or origin> <ssh or web address>
 git clone <ssh or web address> #no real need for this, but it sets branch tracking automatically
 ```
+--------------------------------
 #### GITIGNORE:
 
-* set up .gitignore:
+* `touch .gitignore` -- * set up .gitignore *
+* `cat .gitignore` -- * .gitignore contents*
+* **gitignore wildcards:**
+  * `<fodername>/` -- *will ignore any folder with foldername*
+  * `*.<extension>` -- *ignores all files with this extension*
+  * `<filename>` -- *ignores file with filename*
+  * `<filename>*` -- *ignores filename with any extenson*
 
-```bash
-touch .gitignore
-```
-* .gitignore contents:
+-----------------------
+#### GIT ACTIONS:
 
-```bash
-$ cat.gitignore
-```
-* gitignore wildcards:
-
-```
-<fodername>/ #will ignore any folder with foldername
-*.<extension> #ignores all files with this extension
-<filename> #ignores file with filename
-<filename>* #ignores filename with any extenson
-```
-####GIT ACTIONS:
-
-* show changes in project directory and staging area:
-
-```
-git status
-```
-* if unwanted file is trackded (shows up in git status):
-
-```
-git rm --cached <file>
-```
-
-* if unneded folder is tracked:
-
-```
-git rm -r --cached <foldername>
-```
+* `git log --stat` -- * Shows log with filechanges *
+* `git status` -- * show changes in project directory and staging area*
+* `git rm --cached <file>` -- * removes unvanted **file** from staging area (shows up in git status)*
+* `git rm -r --cached <file>` -- * removes unvanted **folder** from staging area (shows up in git status)*
 
 * add needed changes to Index:
 
@@ -66,11 +46,8 @@ git add -A #adds all files
 git add -p #begins an interactive staging session
 ```
 
-* commit to Head (local repo). Commits the staged snapshot:
-
-```
-git commit -m "Commit message"
-```
+  * `git commit -m "Commit message"` -- * commit to Head (local repo). Commits the staged snapshot *
+  * `git commit -a -m "Commit message"` -- * commit to Head (local repo). Allows to commit skipping git add step by adding everything in git status *
 
 * commit to remote repo:
 
@@ -136,8 +113,9 @@ git stash pop #applies the stash and immediately drops it from the stack
 ```
 git checkout -b <new-branch> <existing branch name>
 ```
-* Development should always take place in a branch never on a `detached HEAD` state
+* Development should always take place in a branch **never** on a `detached HEAD` state
 
+----------------------
 ##### GIT MERGE
 * Target branch (branch that is merged in another branch(?))remains unaffected by merge
 * Takes independent lines of development created by `git branch` and integrates them in a single branch (current branch):
@@ -155,6 +133,7 @@ git merge <branch>
 ```
 git merge --no-ff <branch>
 ```
+---------------------
 #### UNDOING CHANGES
 
 * Check the previous version of a file:
@@ -173,24 +152,25 @@ git revert HEAD
 ```
 ##### GIT RESET
 
-* Undo changes made in the most current commit, leave working directory unchanged:
+* `git reset <commit>` -- * Undo changes made in the most current commit, leave working directory unchanged *
+* `git reset <file>`   -- * Remove file from staging area, leave working directory unchanged *
 
-```
-git reset <commit> 
-```
-* Remove file from staging area, leave working directory unchanged:
+##### GIT AMEND
 
-```
-git reset <file>
+* `git commit --amend` -- *takes your staging area and uses it for the commit. If you’ve made no changes since your last commit (for instance, you run this command immediately after your previous commit), then your snapshot will look exactly the same, and all you’ll change is commit message *
+
+* example workflow: (second commit replaces the first commit):
+
+```bash
+git commit -m 'initial commit'
+git add <forgotten_file>
+git commit --amend
 ```
 
-###### GIT FETCH VS GIT PULL
+-----
+#### GIT FETCH VS GIT PULL
 
 * Locally, a local repo and a copy of remote repo is stored
 * 'git fetch'  brings local copy of remote repo up to date, this never changes any of my own local branches, so it **does not change my working copy**
 * 'git pull' brings the remote repo changes in local repo, where I keep my code, so it **changes my working copy**
 * Normally, 'git pull' first does 'git fetch' adn then merges 'git merge' changes in my local code repo.
-
-
-
-
