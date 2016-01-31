@@ -22,8 +22,8 @@ git clone <ssh or web address> #no real need for this, but it sets branch tracki
 --------------------------------
 #### GITIGNORE:
 
-* `touch .gitignore` -- * set up .gitignore *
-* `cat .gitignore` -- * .gitignore contents*
+* `touch .gitignore` -- *set up .gitignore*
+* `cat .gitignore` -- *.gitignore contents*
 * **gitignore wildcards:**
   * `<fodername>/` -- *will ignore any folder with foldername*
   * `*.<extension>` -- *ignores all files with this extension*
@@ -33,10 +33,10 @@ git clone <ssh or web address> #no real need for this, but it sets branch tracki
 -----------------------
 #### GIT ACTIONS:
 
-* `git log --stat` -- * Shows log with filechanges *
-* `git status` -- * show changes in project directory and staging area*
-* `git rm --cached <file>` -- * removes unvanted **file** from staging area (shows up in git status)*
-* `git rm -r --cached <file>` -- * removes unvanted **folder** from staging area (shows up in git status)*
+* `git log --stat` -- *Shows log with filechanges*
+* `git status` -- *show changes in project directory and staging area*
+* `git rm --cached <file>` -- *removes unwanted **file** from staging area (shows up in git status)*
+* `git rm -r --cached <file>` -- *removes unwanted **folder** from staging area (shows up in git status)*
 
 * add needed changes to Index:
 
@@ -46,8 +46,8 @@ git add -A #adds all files
 git add -p #begins an interactive staging session
 ```
 
-  * `git commit -m "Commit message"` -- * commit to Head (local repo). Commits the staged snapshot *
-  * `git commit -a -m "Commit message"` -- * commit to Head (local repo). Allows to commit skipping git add step by adding everything in git status *
+  * `git commit -m "Commit message"` -- *commit to local repo. Commits the staged snapshot*
+  * `git commit -a -m "Commit message"` -- *commit to local repo. Allows to commit skipping git add step by adding everything in git status*
 
 * commit to remote repo:
 
@@ -81,20 +81,24 @@ git stash pop #applies the stash and immediately drops it from the stack
 * Inside pull request, activity such as feedback and follow-up commits, is tracked
 * When feature is accepted by project maintainer, it is merged in official repo and pull request is closed
 
+------------------
 #### GIT USING BRANCHES
-##### GIT BRANCH
+
 * Independent line of development
 * To encapsulate any changes, new work is done in a new branch, so unstable branch is never commited to a master branch
 * Branches are just pointers to commits
+* **Master** branch is no special, its just the same as others and can be renamed
+* **HEAD** is just a pointer to the current branch
 
   * `git branch` -- *List all branches in my repo*
   * `git branch -a` -- *list all branches*
   * `git branch <new branch name>` -- *Create a new branch*
   * `git branch -d <branch name>` -- *delete branch, but it prevents deleting branch with unmerged changes*
   * `git branch -D <branch name>` -- *Force delete branch*
-  * `fdgit branch -m <new branch name>` -- *Rename branch*
+  * `git branch -m <new branch name>` -- *Rename branch*
 
-##### GIT CHECKOUT
+-------------------------
+#### GIT CHECKOUT
 * Navigates:
   * Between files
   * Between commits
@@ -116,11 +120,18 @@ git checkout -b <new-branch> <existing branch name>
 * Development should always take place in a branch **never** on a `detached HEAD` state
 
 ----------------------
-##### GIT MERGE
+#### GIT MERGE
 * Target branch (branch that is merged in another branch(?))remains unaffected by merge
 * `git merge` -- *Takes independent lines of development created by `git branch` and integrates them in a single branch (current branch)*
 * `git merge <branch>` -- *To merge `<branch>` into current branch*
 * `git merge --no-ff <branch>` -- *To merge `<branch>` into current branch, and also generate a merge commit*
+* after merging, delete the unneeded branch
+* `git branch -d <branchname>` -- deletes branch
+
+------------------------
+#### MERGE CONFLICTS
+* arises when there is a change on the same part of the same file on two branches being merged
+
 
 ---------------------
 #### UNDOING CHANGES
@@ -163,3 +174,29 @@ git commit --amend
 * 'git fetch'  brings local copy of remote repo up to date, this never changes any of my own local branches, so it **does not change my working copy**
 * 'git pull' brings the remote repo changes in local repo, where I keep my code, so it **changes my working copy**
 * Normally, 'git pull' first does 'git fetch' adn then merges 'git merge' changes in my local code repo.
+
+-------
+#### WORKING WITH REMOTE REPOS
+
+* `git remote` -- *shows configured remote repos*
+* `git remote -v` -- *shows all remote repos with urls*
+* `git remote add <name> <url>` -- *adds new remote repo*
+* `git push <remote repo name> <remote repo branch>`
+* `git remote show <remote repo name>` -- *shows info about remote repo*
+
+--------------
+#### GIT TAGGING
+
+* git allows to **tag** specific points in history as being important
+* `git tag` -- *shows all existing tags*
+* *lightweiht tag* is a pointer to specific commit
+* *annotated tag* is a full object in git database
+* `git tag -a <tagname> -m "message"` -- *create a new **annotated**tag*
+* `git tag <tagname>` -- *create a new **lightweiht** tag*
+* `git show <tagname>` -- *shows tag info*
+* it is also possible to tag past commits
+* `git push` doses not transfer tag info by default
+  * `git push <remote repo name>  <tagname>` -- *pushes tags to remote repo*
+  * *cloning* and *pulling* does transfer tag info
+
+---------------
