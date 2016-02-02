@@ -233,3 +233,5 @@ classname.methodname(arg);
 </natures>
 ```
 * configure build path, add libraries
+* *before adding jar files in build path, directories in package explorer are shown as packages*
+* *after adding jar files in build path, directories in package explorer appear as normal*
