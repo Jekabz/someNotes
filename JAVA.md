@@ -215,4 +215,21 @@ structors are declared public
 ```java
 classname.methodname(arg);
 ```
+-----------------
+###### OPEN GIT PROJECTS IN ECLIPSE
 
+* `file/import/projects from git (with smart import)/...` -- *imports default project in eclipse*
+* to convert default project to java project, add these sections to `.project` file in working dir:
+```xml
+<buildSpec>
+    <buildCommand>
+        <name>org.eclipse.jdt.core.javabuilder</name>
+        <arguments>
+        </arguments>
+    </buildCommand>
+</buildSpec>
+<natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+</natures>
+```
+* configure build path, add libraries
