@@ -208,6 +208,7 @@ cannot return values, so they cannot specify a return type (not even void ). Nor
 structors are declared public
 * Keyword new requests memory from the system to store an object, then calls the corresponding class’s constructor to initialize the object.
 
+------------------
 ###### STATIC METHODS
 
 * Define frequently used tasks
@@ -217,5 +218,24 @@ structors are declared public
 ```java
 classname.methodname(arg);
 ```
+-----------------
+###### OPEN GIT PROJECTS IN ECLIPSE
 
+* `file/import/projects from git (with smart import)/...` -- *imports default project in eclipse*
+* to convert default project to java project, add these sections to `.project` file in working dir:
+```xml
+<buildSpec>
+    <buildCommand>
+        <name>org.eclipse.jdt.core.javabuilder</name>
+        <arguments>
+        </arguments>
+    </buildCommand>
+</buildSpec>
+<natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+</natures>
+```
+* configure build path, add libraries
+* *before adding jar files in build path, directories in package explorer are shown as packages*
+* *after adding jar files in build path, directories in package explorer appear as normal*
 
