@@ -190,6 +190,7 @@ public class Foo{
 ###### MAIN METHOD
 
 * Any class can contain main() method. JVM only invokes main() that is in the class used to execute the application 
+* Main() is **static**, because this lets JVM to invoke main without creating an instance of the class
 
 ###### PACKAGE
 
@@ -210,9 +211,11 @@ structors are declared public
 ###### STATIC METHODS
 
 * Define frequently used tasks
-* Static method is called like this:
+* Static methods in the same class can call each other directly
+* Static method from another class is called like this:
 
 ```java
 classname.methodname(arg);
 ```
+
 

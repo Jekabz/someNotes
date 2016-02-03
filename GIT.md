@@ -96,6 +96,7 @@ git stash pop #applies the stash and immediately drops it from the stack
   * `git branch -d <branch name>` -- *delete branch, but it prevents deleting branch with unmerged changes*
   * `git branch -D <branch name>` -- *Force delete branch*
   * `git branch -m <new branch name>` -- *Rename branch*
+  * `git branch -v` -- *shows last commits on each branch*
 
 -------------------------
 #### GIT CHECKOUT
@@ -131,6 +132,8 @@ git checkout -b <new-branch> <existing branch name>
 ------------------------
 #### MERGE CONFLICTS
 * arises when there is a change on the same part of the same file on two branches being merged
+* run `git status` to see which files are **unmerged**, open them and merge manually
+* run `git add` on each file to mark it as resolved, then do `git commit`
 
 
 ---------------------
