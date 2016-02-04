@@ -97,6 +97,7 @@ git stash pop #applies the stash and immediately drops it from the stack
   * `git branch -D <branch name>` -- *Force delete branch*
   * `git branch -m <new branch name>` -- *Rename branch*
   * `git branch -v` -- *shows last commits on each branch*
+
 -------------------------
 ##### LOCAL BRANCH
 
@@ -104,6 +105,7 @@ git stash pop #applies the stash and immediately drops it from the stack
 * local branch can and mostly should be set to track a remote branch (not necessarily the same name)
 * `Tracking branches` are local branches that have a direct relationship to a remote branch.
   * `git branch -vv` -- *shows upstream info for all local branches*
+  
 -------------------------
 ##### REMOTE BRANCH
 
