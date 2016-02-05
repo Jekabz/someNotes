@@ -8,7 +8,7 @@
 #### THE COMPLEX API
 
 * `org.apache.hadoop.hive.ql.udf.generic.GenericUDF` requires to implement 3 methods:
-   * `abstract Object evaluate(GenericUDF.DeferredObject[] arguments);` -- *takes args, returns **boolean** result*
-   * `abstract String getDisplayString(String[] children);` -- *returns some string, does not matter*
-   * `abstract ObjectInspector initialize(ObjectInspector[] arguments);` -- *used for input validation*
-  
+  * `abstract Object evaluate(GenericUDF.DeferredObject[] arguments);` -- *takes args, returns **boolean** result*
+  * `abstract String getDisplayString(String[] children);` -- *returns some string, does not matter*
+  * `abstract ObjectInspector initialize(ObjectInspector[] arguments);` -- *used for input validation **passes data to UDF***
+ 
