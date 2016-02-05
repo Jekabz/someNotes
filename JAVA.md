@@ -239,3 +239,7 @@ classname.methodname(arg);
 * *before adding jar files in build path, directories in package explorer are shown as packages*
 * *after adding jar files in build path, directories in package explorer appear as normal*
 
+--------------------------
+###### @Override
+
+* If a class inherits a method from its super class, then there is a chance to override the method provided that it is not marked final.
