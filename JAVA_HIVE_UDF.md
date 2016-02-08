@@ -55,3 +55,5 @@ generic structure:
 ------------------------
 
 #### UDAFs
+
+* Computes partial rezsult, because input rows are passsed one after another
