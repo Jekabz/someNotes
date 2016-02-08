@@ -243,3 +243,39 @@ classname.methodname(arg);
 ###### @Override
 
 * If a class inherits a method from its super class, then there is a chance to override the method provided that it is not marked final.
+
+---------------------------
+###### INTERFACE
+
+* Interface is a group of related methods with empty dodies
+```java
+interface Bicycle {
+    void speedUp(int increment);
+    void applyBrakes(int decrement);
+}
+```
+* To implement an interface, do like this:
+
+``` java
+class MyBicycle implements Bicycle {
+    int speed = 0;
+    int gear = 1;
+
+   // The compiler will now require that methods
+   // speedUp, and applyBrakes
+   // all be implemented. Compilation will fail if those
+   // methods are missing from this class.
+
+    void changeGear(int newValue) {
+         gear = newValue;
+    }
+
+    void speedUp(int increment) {
+         speed = speed + increment;   
+    }
+
+    void applyBrakes(int decrement) {
+         speed = speed - decrement;
+    }
+}
+```
