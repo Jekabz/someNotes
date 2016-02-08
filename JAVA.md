@@ -279,3 +279,7 @@ class MyBicycle implements Bicycle {
     }
 }
 ```
+
+----------------------
+#### DEFERRED/PROMISE OBJECT
+
