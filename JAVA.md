@@ -290,3 +290,9 @@ class MyBicycle implements Bicycle {
 * List can have dublicates
 
 -----------------------
+#### JAVA COLLECTION
+
+* contains:
+  * `Interfaces` -- *group of related methods with empty bodies*
+  * `Implementations` -- *implementations of the collection intertfaces*
+  * `Algorithms` -- *Methods on collection implementations*
