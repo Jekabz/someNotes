@@ -283,3 +283,10 @@ class MyBicycle implements Bicycle {
 ----------------------
 #### DEFERRED/PROMISE OBJECT
 
+----------------------
+#### JAVA LIST
+
+* Collection, that stores sequence of elements
+* List can have dublicates
+
+-----------------------
