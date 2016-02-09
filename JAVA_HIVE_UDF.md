@@ -57,3 +57,11 @@ generic structure:
 #### UDAFs
 
 * Computes partial rezsult, because input rows are passsed one after another
+
+-------------------------
+-------------------------
+
+#### DEFERREDOBJECT[]
+
+* A Defered Object allows us to do lazy-evaluation and short-circuiting.
+* GenericUDF use DeferedObject to pass arguments.
