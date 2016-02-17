@@ -219,7 +219,8 @@ git commit --amend
 
 * Resolve conflict between two branches like this:
 ```
-git fetch
+git checkout master
+git pull
 git checkout <branch>
 git merge master
 # manually resolve conflicts
