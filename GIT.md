@@ -217,16 +217,13 @@ git commit --amend
 ---------------
 #### MERGE CONFLICT 
 
-* Step 1: From your project repository, bring in the changes and test.
+* Resolve conflict between two branches like this:
 ```
-git fetch origin
-git checkout -b somebranch origin/somebranch
+git fetch
+git checkout <branch>
 git merge master
-```
-* Step 2: Merge the changes and update on GitHub.
-
-```
-git checkout master
-git merge --no-ff somebranch
-git push origin master
+# manually resolve conflicts
+git add
+git commit
+git push
 ```
