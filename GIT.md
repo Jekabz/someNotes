@@ -215,3 +215,18 @@ git commit --amend
   * *cloning* and *pulling* does transfer tag info
 
 ---------------
+#### MERGE CONFLICT 
+
+* Step 1: From your project repository, bring in the changes and test.
+```
+git fetch origin
+git checkout -b somebranch origin/somebranch
+git merge master
+```
+* Step 2: Merge the changes and update on GitHub.
+
+```
+git checkout master
+git merge --no-ff somebranch
+git push origin master
+```
