@@ -15,3 +15,8 @@
 ---------------------------
 
 
+#### Run maven:
+
+* To run maven first JDS needs to be added to eclipse:
+  * got to window/preferences/java/installed JREs/execution environments, click on java version and tick appropiate jdk version on right pane
+  * if no jdk is shown on left pane, go to window/preferences/java/installed JREs and click `add`, then browse to jdk folder in filesystem
