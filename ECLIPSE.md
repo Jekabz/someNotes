@@ -7,7 +7,7 @@
 * uncehck [ ] `use default location`
 * choose directory with non eclipse project
 * press `next`
-* add project <projectname> to build path
+* add project <projectname> to build path # Maybe not?
 * press `finish`
 * configure the build path with necessary jars if needed
 * resolve errors, if any
