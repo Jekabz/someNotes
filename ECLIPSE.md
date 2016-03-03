@@ -4,11 +4,14 @@
 
 * file/new/java_project
 * give project a name
-* uncehck "use default location"
+* uncehck [ ] `use default location`
 * choose directory with non eclipse project
-* press 'next'
+* press `next`
 * add project <projectname> to build path
-* press 'finish'
+* press `finish`
 * configure the build path with necessary jars if needed
+* resolve errors, if any
+
+---------------------------
 
 
