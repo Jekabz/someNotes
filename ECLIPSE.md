@@ -23,4 +23,5 @@
   * if no jdk is shown on left pane, go to window/preferences/java/installed JREs and click `add`, then browse to jdk folder in filesystem
 
 * if not maven project, press configure/convert to maven project
-* to fire off maven project, go to run as/maven clean install
+* to fire off maven project, go to run as/maven `clean install` in goals
+* to fire off maven with -e switch, add `<yourgoal> -e` in goals
