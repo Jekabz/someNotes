@@ -130,6 +130,8 @@ git stash pop #applies the stash and immediately drops it from the stack
 ```
 git checkout -b <new-branch> <existing branch name>
 ```
+
+* `git checkout -f <branchname>` -- **Checkout to a different branch ignoring any changes in working dir**
 * Development should always take place in a branch **never** on a `detached HEAD` state
 
 ----------------------
