@@ -3,7 +3,7 @@
 * the hell is transaction
 * dfq are primary and foreign keys
 * wtf is nosql
-* 
+* horizontal & vertical scaling
 
 # JAVA
 
