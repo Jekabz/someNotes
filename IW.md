@@ -20,4 +20,24 @@ public class Deer extends Animal implements Vegetarian{} //deer is polymorphic
 * how to compare two instances of the same class
 * tfq are setters and getters for
 * How are exceptions classified
+  * checked -- arises at compile time
+  * unchecked -- occurs at the time of execution
+* try cach **vs** throw:
+  ```java
+  private void calculateArea() throws Exception {
+        ....do something
+    }
+  ```
+  ```java
+  private void calculateArea() {
+        try {
+            ....do something
+
+        } catch (Exception e) {
+            showException(e);
+        }
+    }
+  ```
+  * in first, if method fails, the caller then has to handle that exception
+  * in second, the caller will not see exception at all
 * encapsulation
