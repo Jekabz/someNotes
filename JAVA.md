@@ -296,3 +296,6 @@ class MyBicycle implements Bicycle {
   * `Interfaces` -- *group of related methods with empty bodies*
   * `Implementations` -- *implementations of the collection intertfaces*
   * `Algorithms` -- *Methods on collection implementations*
+
+-----------------------
+#### IDENTITY VS EQUALITY
