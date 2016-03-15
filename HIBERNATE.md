@@ -22,3 +22,7 @@
 * Abstract away the unfamiliar SQL types and provide us to work around familiar Java Objects.
 * Hibernate does not require an application server to operate.
 * Manipulates Complex associations of objects of your database.
+* Minimize database access with smart fetching strategies.
+* Provides Simple querying of data.
+
+
