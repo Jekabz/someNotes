@@ -42,6 +42,21 @@
   * One SessionFactory object per DB
   
 * Session Object
-  * 
+  * gets physical connection with a DB
+  * Lightweight object and is instantiated each time an interaction with DB is needed
+  * Not thread safe, so should not be kept open for a long time. 
+  * Meant to be created and destroyed as needed
+
+* Transaction Object
+  * Represents a unit of work with DB
+  * This object is optional
+ 
+* Query Object
+  * Use `Hivbernate Query Language` string to interact with DB
+ 
+* Criteria Object
+  * ??
+  
+ ----------------------------
 
 
