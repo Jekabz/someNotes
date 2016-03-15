@@ -25,4 +25,23 @@
 * Minimize database access with smart fetching strategies.
 * Provides Simple querying of data.
 
+------------------------------------------------
+#### HIBERNATE APPLICATION ARCHITECTURE:
+
+###### SOME CORE CLASSES:
+
+* Configuration Object
+  * First object to be created in any Hibernate app, created only once during initialization
+  * Has config files for db connection -- *hibernate.properties* and *hibernate.cfg.xml*
+  * Has Class Mapping Setup -- makes connection between Java classes and db tables
+
+* SessionFactory Object
+  * Created by abovementioned SessionFactory object
+  * Used by all threads in app
+  * Heavy object, so it is created during app startup and kept for later use
+  * One SessionFactory object per DB
+  
+* Session Object
+  * 
+
 
