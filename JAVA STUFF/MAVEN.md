@@ -24,4 +24,14 @@
 ------------------------------
 #### DEPENDENCY MANAGEMENT
 
+```xml
+    <dependencies>
+        <dependency>
+            <groupId>The group or organization that the dependency belongs to</groupId>
+            <artifactId>The library that is required</artifactId>
+            <version>The specific version of the library that is required</version>
+        </dependency>
+    </dependencies>
+```
+
 
