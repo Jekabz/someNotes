@@ -1,11 +1,5 @@
 # MAVEN
 
-#### MAVEN ASSEMBLY PLUGIN
-
-* Aggregates project output with dependancies, modules, docs etc into a single dizstributable archive.
-* There are `descriptors` available to package project's artifacts into different formats
-
---------------------------
 #### POM
 
 * `<modelVersion` -- *Pom model version, usually 4.0.0*
@@ -51,3 +45,51 @@
 * __Uber Jar__ takes dependencies, extracts them in project classes
 * __Uber Jar__ is all that is needed for code deployment
 * Do not put __Uber Jar__ in Maven dependency, it will ruin the dependency resolution 
+
+---------------------------
+
+#### MAVEN ASSEMBLY PLUGIN
+
+* aggregates project files, resources and dependancies in distributable archive
+* There are `descriptors` available to package project's artifacts into different formats
+* Not good for making __Uber Jar__
+* Assembly plugin can build one or several `assemblies` for a project
+* `Assembly`  is a group of files, directories, and dependencies that are assembled into an archive format and distributed
+* Depending on functionality, one project can have multiple `assemblies` that bundle the application with a different set of supporting scripts and dependency sets. 
+
+---------------------------
+
+#### MAVEN JAVA FORMATTER PLUGIN
+
+* formats source code for in Eclipse according to `styleProfile.xml`
+
+```xml
+<plugin>
+    <groupId>com.googlecode.maven-java-formatter-plugin</groupId>
+    <artifactId>maven-java-formatter-plugin</artifactId>
+    <version>0.3.1</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>format</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <configuration>
+            <configFile>/config/styleProfile.xml</configFile>
+        </configuration>
+    </configuration>
+</plugin
+```
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<profiles version="11">
+    <profile kind="CodeFormatterProfile" name="styleProfile" version="11">
+        <setting id="org.eclipse.jdt.core.formatter.comment.insert_new_line_before_root_tags" value="insert"/>
+        <setting id="org.eclipse.jdt.core.formatter.insert_space_after_comma_in_annotation" value="insert"/>
+        <!-- all kinds of settings here -->
+    </profile>
+</profiles>
+```
+
