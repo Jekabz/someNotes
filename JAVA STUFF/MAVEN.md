@@ -82,6 +82,8 @@
     </configuration>
 </plugin
 ```
+
+`styleProfile.xml`:
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <profiles version="11">
