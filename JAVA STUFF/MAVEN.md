@@ -30,8 +30,13 @@
             <groupId>The group or organization that the dependency belongs to</groupId>
             <artifactId>The library that is required</artifactId>
             <version>The specific version of the library that is required</version>
+            <scope>See below</scope>
         </dependency>
     </dependencies>
 ```
+* `\<scope\>` see the choices below:
+  * `compile` -- *default option, dependency should be available at compile time*
+  * `provided` -- *Dependencies that are required for compiling the project code, but that will be provided at runtime by a container running the code (e.g., the Java Servlet API).*
+  * `test` -- *Dependencies that are used for compiling and running tests, but not required for building or running the project’s runtime code.*
 
-
+----------------------------
