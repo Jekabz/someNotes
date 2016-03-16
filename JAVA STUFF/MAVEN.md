@@ -40,3 +40,6 @@
   * `test` -- *Dependencies that are used for compiling and running tests, but not required for building or running the project’s runtime code.*
 
 ----------------------------
+#### MAVEN PLUGINS
+
+----------------------------
