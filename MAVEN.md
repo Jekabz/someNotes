@@ -19,4 +19,9 @@
 
 * `mvn compile` -- *compildes into each .java file in .class file and places .class files in target directory*
 * `mvn package` -- *does __mvn compile__ runs tests, in target directory, makes \<\<artifactId\>\<version\>\>.jar files*
-* `mvn install` -- **
+* `mvn install` -- *does __mvn compile__ and copies the jar from my project into local maven dependency repo, ready for another project to refer to*
+
+------------------------------
+#### DEPENDENCY MANAGEMENT
+
+
