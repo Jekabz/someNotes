@@ -15,3 +15,8 @@
 * `<packaging>` -- *How the project should be packaged*
 
 -----------------------------
+#### MAVEN LIFECYCLE GOALS
+
+* `mvn compile` -- *compildes into each .java file in .class file and places .class files in target directory*
+* `mvn package` -- *does __mvn compile__ runs tests, in target directory, makes <<artifactId><version>>.jar files*
+* `mvn install` -- **
