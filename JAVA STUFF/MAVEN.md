@@ -40,6 +40,14 @@
   * `test` -- *Dependencies that are used for compiling and running tests, but not required for building or running the project’s runtime code.*
 
 ----------------------------
-#### MAVEN PLUGINS
+## MAVEN PLUGINS
 
 ----------------------------
+
+#### MAVEN SHADE PLUGIN
+
+* Makes an __Uber Jar__ - a .jar that contains everything - all the dependencies
+* Normally (without Maven Shade), the .jar contains only the classes/resources to itself
+* __Uber Jar__ takes dependencies, extracts them in project classes
+* __Uber Jar__ is all that is needed for code deployment
+* Do not put __Uber Jar__ in Maven dependency, it will ruin the dependency resolution 
