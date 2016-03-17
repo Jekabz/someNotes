@@ -84,6 +84,16 @@ https://github.com/junit-team/junit/wiki/Parameterized-tests
 ###### CATEGORIES
 https://github.com/junit-team/junit/wiki/Categories
 
+--------------------
+#### TEST EXECUTION ORDER
+https://github.com/junit-team/junit/wiki/Test-execution-order
+
+* Jvm does not specify any particular order, tests are executed at random order
+
+---------------------
+#### EXCEPTION TESTING
+
+
 
 
 
