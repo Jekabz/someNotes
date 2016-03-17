@@ -1,5 +1,7 @@
 # JUNIT
 
+* Framework to write repeatable tests
+
 ```Java
 import org.junit.*;
 
@@ -40,3 +42,25 @@ public class FoobarTest {
     }
 }
 ```
+---------------------
+
+#### ASSERTIONS
+
+* JUnit has assertion methods for all Java Objects and primitive types and arrays of them
+* Parameter order:
+  * String message shown if assert fails (optional)
+  * Expected value (if the assertion knows the expected value (assertNotNull etc.), this is not needed)
+  * Actual value (recieved)
+```java
+  @Test
+  public void testAssertNotSame() {
+    assertNotSame("should not be same Object", new Object(), new Object());
+  }
+```
+* __assertThat__ :
+  * Parameter order:
+    * String message shown if assert fails (optional)
+    * Actual value (recieved)
+    * `Matcher` object
+
+
