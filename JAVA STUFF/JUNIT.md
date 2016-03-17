@@ -73,8 +73,18 @@ public class FoobarTest {
 ##### SPECIALIZED RUNNERS
 
 ###### SUITE
-(https://github.com/junit-team/junit/wiki/Aggregating-tests-in-suites "official docs")
+https://github.com/junit-team/junit/wiki/Aggregating-tests-in-suites
+
 * Allaws to build test aggregation with tests from many classes
 * To use it, annotate the class with `@RunWith(Suite.class)` and ``@SuiteClasses(TestClass1.class, ...`
+
+###### PARAMETERIZED
+https://github.com/junit-team/junit/wiki/Parameterized-tests
+
+###### CATEGORIES
+https://github.com/junit-team/junit/wiki/Categories
+
+
+
 
 
