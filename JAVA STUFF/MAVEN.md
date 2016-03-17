@@ -98,7 +98,20 @@
 #### MAVEN SUREFIRE PLUGIN
 http://maven.apache.org/surefire/maven-surefire-plugin/
 
-* Used during the `test` phase of the build lifecycle tu execute JUnit tests
+* Used during the `test` phase of the build lifecycle to execute JUnit or other tests
 * Generates reports in `/target/surefire-reports`
-* 
+* Configure and get started with __JUnit__:
+```xml
+<dependencies>
+  [...]
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  [...]
+</dependencies>
+```
+http://maven.apache.org/surefire/maven-surefire-plugin/examples/junit.html
 
