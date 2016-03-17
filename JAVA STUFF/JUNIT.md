@@ -43,7 +43,6 @@ public class FoobarTest {
 }
 ```
 ---------------------
-
 #### ASSERTIONS
 
 * JUnit has assertion methods for all Java Objects and primitive types and arrays of them
@@ -62,5 +61,20 @@ public class FoobarTest {
     * String message shown if assert fails (optional)
     * Actual value (recieved)
     * `Matcher` object
+
+----------------------
+#### TEST RUNNERS
+
+* IDEs have graphical runners
+
+* __@RunWith__ annotation
+  * Changes the JUnit runner for particular class
+
+##### SPECIALIZED RUNNERS
+
+###### SUITE
+(https://github.com/junit-team/junit/wiki/Aggregating-tests-in-suites "official docs")
+* Allaws to build test aggregation with tests from many classes
+* To use it, annotate the class with `@RunWith(Suite.class)` and ``@SuiteClasses(TestClass1.class, ...`
 
 
