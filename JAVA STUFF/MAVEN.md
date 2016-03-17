@@ -95,3 +95,10 @@
 </profiles>
 ```
 
+#### MAVEN SUREFIRE PLUGIN
+http://maven.apache.org/surefire/maven-surefire-plugin/
+
+* Used during the `test` phase of the build lifecycle tu execute JUnit tests
+* Generates reports in `/target/surefire-reports`
+* 
+
