@@ -62,3 +62,48 @@ class Foo{
 | ---    | ---   | ---   | ---       | ---     | ---           | ---        | ---           | ---|
 | Access modifier | Nonaccess modifier | Keyword | Name | Keyword | Name | Keyword | Name| |
 | optinal | optional | needed | needed | optional | optional | optional | optional | needed|
+
+###### class definition
+* Class is a design used to specify the properties an behavior of object
+* A class is a design from which an object can be created
+
+###### variables
+* `instance variables` -- each object (instance of a class) has its own copy
+* `class variable` -aka `static variable` -- shared by all objects of a class
+
+###### methods
+* `instance methods` -- manipulates `instance variables`
+* `class methods` aka `static methods` -- works with `static variables`
+
+###### constructors
+* Creates and initializes the object of a class
+* Class can have multiple different (overloaded) constructors
+
+----
+#### Structure and components of a Java source code file
+* defines classes and Interfaces
+
+###### Interface
+* `interface`  -- abstract type that contains no data or code, but defines behaviors as method signatures
+* use interfaces when you see that something in your design will change frequently
+* `interface` specifies a contract for the classes to implement
+```java
+interface Controls {
+  void changeChannel(int channelNumber);
+  void increaseVolume();
+  void decreaseVolume();
+}
+```
+
+###### Single and multiple class definitions in .java file:
+* in one .java file, you can define:
+  * a single class
+  * multiple interfaces
+  * multiple classes and interfaces
+  * multiple classes
+* classes and interfaces can appear in any order
+* in one .java file, there can only be one `public` class or interface, and its name must match name of .java
+  * `public` class name should match .java name
+  * if (not in a class body)`public` interface name should match .java name
+
+----
