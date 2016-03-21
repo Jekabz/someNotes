@@ -107,3 +107,23 @@ interface Controls {
   * if (not in a class body)`public` interface name should match .java name
 
 ----
+### Executable Java applications
+###### Executable Java class VS non-executable Java class:
+* in `executable` classes, jvm starts execution at main(), defined in class
+* in `non-executable` classes no main() is defined, there is no entry point in them
+
+###### Main() method
+* Makes a class executable
+```java
+public class HelloExam {
+  public static void main(String args[]) {
+    System.out.println("Hello exam");
+  }
+}
+```
+* main() must take in String args[] or String arg
+
+###### Java ellipsis (...)
+* These two are quvivalent:
+  * `void functionName(String[] stringArrName){}`
+  * `void functionName(String ... StringArrName){}`
