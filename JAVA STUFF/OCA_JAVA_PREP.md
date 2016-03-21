@@ -122,8 +122,21 @@ public class HelloExam {
 }
 ```
 * main() must take in String argsName[] or String argName
+* These two are quvivalent:
+  ```java
+  public static void main(String[] arg){}
+  ```
+  ```java
+  static public void main(String[] arg){}
+  ```
 
 ###### Java ellipsis (...)
 * These two are quvivalent:
   * `void functionName(String[] stringArrName){}`
   * `void functionName(String ... StringArrName){}`
+
+###### Java arrays
+* These two are quvivalent:
+  * `type[] name`
+  * `type name[]`
+
