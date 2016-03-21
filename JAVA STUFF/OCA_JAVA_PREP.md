@@ -121,7 +121,7 @@ public class HelloExam {
   }
 }
 ```
-* main() must take in String args[] or String arg
+* main() must take in String argsName[] or String argName
 
 ###### Java ellipsis (...)
 * These two are quvivalent:
