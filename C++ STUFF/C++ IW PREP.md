@@ -95,7 +95,7 @@ catch(…){}
 ###### What is a container class?
 * A class containing at least one member variable of another class type in it is called so
 
-###### What is a token?What is a token?
+###### What is a token?
 
 ###### What are the different ways of passing parameters to the functions? Which to use when?
 * call by value
