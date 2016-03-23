@@ -10,3 +10,7 @@ esc+/ -- same as tab autocomplete, but only for filenames
 ctrl+l -- same as clear
 ----
 ctrl+o
+  * With up arrow go to desired command
+  * ctrl+o
+  * you are given the next command in line
+  * profit!
