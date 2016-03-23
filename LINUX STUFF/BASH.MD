@@ -14,3 +14,18 @@ ctrl+o
   * ctrl+o
   * you are given the next command in line
   * profit!
+
+#### configuration files:
+
+###### .bash_profile
+###### .bash_logout
+###### .bashrc
+
+#### variables
+* by convention, built in variables ar UPPER CASSE
+* `varname=value` -- *defines variable, no space between or after =*
+* if variable contains several words, it has to be in single quotes
+* to refer to a variable, precede its name with $
+
+$HISTSIZE -- *how many commands are saved in history*
+`cd -` -- *goes back one directory*
