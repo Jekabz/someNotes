@@ -8,3 +8,5 @@ ctrl+z -- pause current command
 ctrl+d -- end of input (QUIT)
 esc+/ -- same as tab autocomplete, but only for filenames
 ctrl+l -- same as clear
+----
+ctrl+o
