@@ -171,3 +171,32 @@ public class HelloExam {
 
 ###### recursively importing subpackages
 * not possible
+
+###### static imports
+* `import static` -- imports all static members (methods and variables) of a class
+* `import static packagename.classname.*;`
+
+#### Java access modifiers
+* access modifiers are applied to classes, interfaces and their members
+* access modifiers control the accessibility of class and its members outside the class and the package
+
+  * `default` -- *members(including classes) are only accessible to classes and interfaces in the same package*
+  * `public` -- *makes class available to classes outside its package, import is still necessary though*
+  * `protected` -- *access to members from classes in the same package and derived classes in whichever package*
+  * `private` -- *private members are not accessible outside the class they are defined in*
+
+###### Access to members
+* Standard way is to access class members (in the same package or if package is imported) (call the respective class constructor first) `packageClassName.membername`
+* From a class that extends baseclass, baseclass members can be acessed by their name, no previous baseclass constructor is needed
+
+#### Nonaccess modifiers
+* Nonaccess modifiers change the default properties of class and its members
+* nonaccess modifiers are:
+  * `abstract` --
+  * `static` --
+  * `final` --
+  * `synchronized` --
+  * `native` --
+  * `strictfp` --
+  * `transient` --
+  * `volatile` --
