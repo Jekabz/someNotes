@@ -66,6 +66,8 @@ class Foo{
 ###### class definition
 * Class is a design used to specify the properties an behavior of object
 * A class is a design from which an object can be created
+* A __top level__ class or an interface is such that it is not defined within another class or interface
+* A __nested__ class or interface is defined in another class or interface
 
 ###### variables
 * `instance variables` -- each object (instance of a class) has its own copy
@@ -192,7 +194,7 @@ public class HelloExam {
 #### Nonaccess modifiers
 * Nonaccess modifiers change the default properties of class and its members
 * nonaccess modifiers are:
-  * `abstract`
+  * `abstract` -- for __class__ and __metods__
     * class can not be instantiated. It can or cannot define any abstract methods. Non abstract classes cannot contain abstract methods
     * `abstract interface` -- `intertface` is abstract by default, so the following two are the same:
       * `interface Foo{}`
@@ -200,13 +202,31 @@ public class HelloExam {
     * `abstract methods` -- does not have a body and is implemented in a derived class.
     ```java
     abstract class Person{
-      public void displayName(); // empty body does not make an abstract method
-      public abstract void doSomething(); // abstract method
+        public void displayName(); // empty body does not make an abstract method
+        public abstract void doSomething(); // abstract method
     }
     ```
     * There is no such thing as abstract variables
-  * `static` -- **
-  * `final` -- **
+  * `static` -- for __variables__ and __methods__ and __classes__ and __interfaces__
+    * `static` members cannot be overriden by inherited classes, but can be redefined
+    * static members are forbidden from accesing instance members
+    * `static variable` aka `class variable`
+      * common to all instances to class
+      * can be accessed even if there are no instances of class
+      * `static final` would make a constant
+      * it is advisable to access static members through base classname, but can be accessed using child classname aswell      
+    * `static methods`
+      * cannot use instance variables of the class they are defined in
+      * can access and manipulate static variables
+    * `static class` -- not for __top level__
+    * `static intertface` -- not for __top level__
+  * `final` -- for __class__ and __variable__ and __method__
+    * `final class` -- *cannot be extended*
+    * `final variable` -- *value is assigned only once, but you can call methods on it*
+    * `final method` -- *cannot be overriden by a derived class*
+    * __interfaces cannot be marked final__
+    * `static` and `final` __nonaccess modifiers together define constants__
+      * by convention, constants are UPPER_CASE
   * `synchronized` -- *cant be accessed by more than one thread at a time*
   * `native` -- *calls for methods or libraries from c++ or some other language*
   * `strictfp` -- *Makes sure that float calculations are same on all platforms*
