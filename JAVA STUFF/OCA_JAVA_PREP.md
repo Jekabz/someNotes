@@ -126,7 +126,7 @@ public class HelloExam {
   ```java
   public static void main(String[] arg){}
   ```
-  
+
   ```java
   static public void main(String[] arg){}
   ```
@@ -140,4 +140,34 @@ public class HelloExam {
 * These two are quvivalent:
   * `type[] name`
   * `type name[]`
+----
+#### Java packages
+* Packages are used to group together related set of classes and interfaces
+* Packages provide access protection
+* Packages provide namespace management
+* Packages can have subpackages
+* Package naming often have strict rules
+* Package works like a namespace
 
+* Package naming convention:
+`com.organisationname.category.subcategory`
+
+* Package names are all lowercase
+* Package and subpackage names are seperated by a `.`
+
+###### Directory structure and package hierarchy
+* The hierarchy of packages should match directory structure
+
+###### Classpath and packages
+* Allows the JVM to find your classes
+* Classpath is .classpath file in the main project directory, which contains paths in xml format.
+
+###### import packages statement
+* import lets you use simple name instead of fully qualified name for classes and interfaces in different packages
+* imports do not increase the file size, it simply lets you use a different name
+
+###### importing single vs all members of a classpath
+* unlike C++, importing a class does not add to filesize of .class filesize
+
+###### recursively importing subpackages
+* not possible
