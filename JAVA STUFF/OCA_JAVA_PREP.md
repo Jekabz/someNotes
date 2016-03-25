@@ -167,10 +167,8 @@ public class HelloExam {
 * Packages can have subpackages
 * Package naming often have strict rules
 * Package works like a namespace
-
 * Package naming convention:
 `com.organisationname.category.subcategory`
-
 * Package names are all lowercase
 * Package and subpackage names are seperated by a `.`
 
@@ -194,6 +192,16 @@ public class HelloExam {
 ###### static imports
 * `import static` -- imports all static members (methods and variables) of a class
 * `import static packagename.classname.*;`
+* static import declaration imports static members from classes, allowing them to be used without class qualification.
+* use it when you require frequent access to static members from one or two classes.
+```java
+import static java.lang.Math.*; // imports PI
+public class HelloWorld {
+    public static void main(String[] args) {
+        out.println("A circumference of " + (PI * 5) + " cm");
+    }
+}
+```
 
 #### Java access modifiers
 * access modifiers are applied to classes, interfaces and their members
@@ -205,8 +213,8 @@ public class HelloExam {
   * `private` -- *private members are not accessible outside the class they are defined in*
 
 ###### Access to members
-* Standard way is to access class members (in the same package or if package is imported) (call the respective class constructor first) `packageClassName.membername`
-* From a class that extends baseclass, baseclass members can be acessed by their name, no previous baseclass constructor is needed
+* Standard way is to access class members (in the same package or if package is imported) (call the respective class constructor first) `constructedClassName.membername`
+* From a class that extends baseclass, baseclass members can be acessed by their name, no previous baseclass constructor is needed, or allowed.
 
 #### Nonaccess modifiers
 * Nonaccess modifiers change the default properties of class and its members
