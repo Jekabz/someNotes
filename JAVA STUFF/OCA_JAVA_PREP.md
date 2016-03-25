@@ -192,11 +192,23 @@ public class HelloExam {
 #### Nonaccess modifiers
 * Nonaccess modifiers change the default properties of class and its members
 * nonaccess modifiers are:
-  * `abstract` --
-  * `static` --
-  * `final` --
-  * `synchronized` --
-  * `native` --
-  * `strictfp` --
-  * `transient` --
-  * `volatile` --
+  * `abstract`
+    * class can not be instantiated. It can or cannot define any abstract methods. Non abstract classes cannot contain abstract methods
+    * `abstract interface` -- `intertface` is abstract by default, so the following two are the same:
+      * `interface Foo{}`
+      *  `abstract interface Foo{}`
+    * `abstract methods` -- does not have a body and is implemented in a derived class.
+    ```java
+    abstract class Person{
+      public void displayName(); // empty body does not make an abstract method
+      public abstract void doSomething(); // abstract method
+    }
+    ```
+    * There is no such thing as abstract variables
+  * `static` -- **
+  * `final` -- **
+  * `synchronized` -- *cant be accessed by more than one thread at a time*
+  * `native` -- *calls for methods or libraries from c++ or some other language*
+  * `strictfp` -- *Makes sure that float calculations are same on all platforms*
+  * `transient` -- *object is not being serialized*
+  * `volatile` --*variable can be modified by different threads*
