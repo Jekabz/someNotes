@@ -89,6 +89,8 @@ class Foo{
 * `interface`  -- abstract type that contains no data or code, but defines behaviors as method signatures
 * use interfaces when you see that something in your design will change frequently
 * `interface` specifies a contract for the classes to implement
+* Interface is __not__ a class
+* Java class can implement multiple interfaces
 ```java
 interface Controls {
   void changeChannel(int channelNumber);
@@ -96,6 +98,18 @@ interface Controls {
   void decreaseVolume();
 }
 ```
+* Abstract class VS interface:
+    * use abstract class when there is strong relationship between the abstract class and the derived classes, use interface when there is not.
+    * Abstract class can have non abstract methods and other stuff, interface can only have method definitions, so any implementing class has to provide its own implementations
+
+    * uses:
+      * __abstract class:__
+        * if you need to use inheritance
+        * if you need non public members, because interface is all public methods only
+        * if you need more methods in future, because with interface, when adding new methods, those methods then have to be defined in all classes that implemented the interface
+      * __interface:__
+        * When you thing  code will not change for a time
+        * When you want something similar to multiple inheritance
 
 ###### Single and multiple class definitions in .java file:
 * in one .java file, you can define:
@@ -142,7 +156,7 @@ public class HelloExam {
 * These two are quvivalent:
   * `type[] name`
   * `type name[]`
-  
+
 ----
 #### Java packages
 * Packages are used to group together related set of classes and interfaces
@@ -208,6 +222,33 @@ public class HelloExam {
     }
     ```
     * There is no such thing as abstract variables
+
+    ```java
+public abstract class Figure
+{
+	/* because this is an abstract method the
+	   body will be blank  */
+	public abstract float getArea();
+}
+
+public class Circle extends Figure
+{
+	private float radius;
+	public float getArea()
+	{
+		return (3.14 * (radius ^ 2)); 	
+	}
+}
+
+public class Rectangle extends Figure
+{
+	private float length, width;
+	public float getArea(Figure other)
+	{
+		return length * width;
+	}
+}
+    ```
   * `static` -- for __variables__ and __methods__ and __classes__ and __interfaces__
     * `static` members cannot be overriden by inherited classes, but can be redefined
     * static members are forbidden from accesing instance members
