@@ -142,6 +142,7 @@ public class HelloExam {
 * These two are quvivalent:
   * `type[] name`
   * `type name[]`
+  
 ----
 #### Java packages
 * Packages are used to group together related set of classes and interfaces
