@@ -114,9 +114,11 @@ interface Controls {
 ###### Single and multiple class definitions in .java file:
 * in one .java file, you can define:
   * a single class
+  * multiple classes
+  * a single interface
   * multiple interfaces
   * multiple classes and interfaces
-  * multiple classes
+
 * classes and interfaces can appear in any order
 * in one .java file, there can only be one `public` class or interface, and its name must match name of .java
   * `public` class name should match .java name
