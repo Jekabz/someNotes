@@ -4,7 +4,7 @@
 * Simplest data types
 * Java is strongly typed language, apart from JavaScript
 * A literal is a fixed value that can be assigned to some variable
-![pic](https://github.com/Jekabz/someNotes/blob/master/JAVA%20STUFF/OCA_PREP/Screenshot%20from%202016-03-26%2011:31:59.png)
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-26%2011:31:59.png)
 
 * `byte`
   * 8 bits
@@ -75,7 +75,7 @@
 
 ###### reference variables VS primitive variables
 * reference variables hold address of an object, but primitive type holds data
-![pic](https://github.com/Jekabz/someNotes/blob/master/JAVA%20STUFF/OCA_PREP/Screenshot%20from%202016-03-26%2017:43:11.png)
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-26%2017:43:11.png)
 
 ###### operators
 * only by casting can you assign bigger type to smaller tipe
@@ -109,4 +109,4 @@ if (name != null && name.length() > 0){
 }
 ```
 ###### operator precedence
-![pic](https://github.com/Jekabz/someNotes/blob/master/JAVA%20STUFF/OCA_PREP/Screenshot%20from%202016-03-26%2020:22:05.png)
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-26%2020:22:05.png)
