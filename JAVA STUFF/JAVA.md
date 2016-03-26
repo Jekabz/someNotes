@@ -23,7 +23,7 @@
 * Each Java process is run in its own sandbox and, by default, cant interact with other java apps
 * Finds and loads classes lazily
 
-###### CLASSPATH	
+###### CLASSPATH
 
 * Specifies location of user-defined classes and packages, used by JVM or javac
 * Default value is current folder
@@ -43,7 +43,7 @@
 
 * runs in rectangle region in browser
 * Browser support will end very soon
- 
+
 ###### JDK
 
 * Implementation of either  `Java SE`, `Java EE`, or `Java ME` platforms
@@ -128,7 +128,7 @@ String user = new String("user");
 ###### PRIMITIVE TYPES
 
 * A primitive-type variable can store exactly one value of its declared type at a time
-* Primitive-type instance variables are initialized by default. Variables of types byt e, char, short, int, long , float and double are initialized to 0 . Variables of type boolean are initialized to false
+* Primitive-type instance variables are initialized by default. Variables of types byte, char, short, int, long , float and double are initialized to 0 . Variables of type boolean are initialized to false
 
 ###### REFERENCE TYPES
 
@@ -189,14 +189,14 @@ public class Foo{
 
 ###### MAIN METHOD
 
-* Any class can contain main() method. JVM only invokes main() that is in the class used to execute the application 
+* Any class can contain main() method. JVM only invokes main() that is in the class used to execute the application
 * Main() is **static**, because this lets JVM to invoke main without creating an instance of the class
 
 ###### PACKAGE
 
 * Classes that are compiled in the same dir. A class in package is implicitly imported in other classes of package, so import declaration is not needed
 
-###### LOCAL VARIABLES 
+###### LOCAL VARIABLES
 
 * Variables declared in a body of a method
 * When method terminates, variable is lost
