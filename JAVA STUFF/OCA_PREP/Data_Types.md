@@ -54,7 +54,7 @@
 `char char = 122;` -- *valid, will assign ASCII char by number*
 `char char = '\u0122';` -- *valid, assigns chars by unicode*
 * __char__ values are all positive, but you can cast negative number to char
-
+* __char__ can be manipulated by arithmetic operators, because that is just a number
 ----
 ###### identifiers
 * unlimited (?) length
@@ -105,7 +105,7 @@ int bar = (int)foo;
 ```java
 String name = "hello";
 if (name != null && name.length() > 0){
-    System.out.println(name.toUpperCase())String name = "hello";
+    System.out.println(name.toUpperCase());
 }
 ```
 ###### operator precedence
