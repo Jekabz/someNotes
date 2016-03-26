@@ -3,9 +3,8 @@
 #### Primitive variables
 * Simplest data types
 * Java is strongly typed language, apart from JavaScript
+* A literal is a fixed value that can be assigned to some variable
 ![pic](https://github.com/Jekabz/someNotes/blob/master/JAVA%20STUFF/OCA_PREP/Screenshot%20from%202016-03-26%2011:31:59.png)
-
-
 
 * `byte`
   * 8 bits
@@ -110,3 +109,4 @@ if (name != null && name.length() > 0){
 }
 ```
 ###### operator precedence
+![pic](https://github.com/Jekabz/someNotes/blob/master/JAVA%20STUFF/OCA_PREP/Screenshot%20from%202016-03-26%2020:22:05.png)
