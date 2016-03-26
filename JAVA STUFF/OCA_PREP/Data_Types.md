@@ -2,14 +2,76 @@
 
 #### Primitive variables
 * Simplest data types
+* Java is strongly typed language, apart from JavaScript
+![alt tag](Screenshot%20from%202016-03-26%2011:31:59.png)
 
-* `char`
+
+
 * `byte`
+  * 8 bits
+  * –128 to 127, inclusive
 * `short`
+  * 16 bits
+  * –32,768 to 32,767, inclusive
 * `int`
+  * 32 bits
+  * –2,147,483,648 to 2,147,483,647, inclusive–2,147,483,648 to 2,147,483,647, inclusive
 * `long`
+  * 64 bits
+  * –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807, inclusive–9,223,372,036,854,775,808 to 9,223,372,036,854,775,807, inclusive
 * `float`
 * `double`
+* `char`
 * `boolean`
+  * `boolean switch = true;`
+  * __true__ or __false__, nothing else
 
-![alt tag]()
+----
+###### whole numbers
+* You can assign integer literals in different  numberic systems:
+* This works with byte, short, int and long
+ * `int decVal = 267;`
+ * `int octVal = 0413;` -- __0__ (null)
+ * `int hexVal = 0x10B;` -- __0x__
+ * `int binVal = 0b100001011;` -- __0b__
+
+* since Java 7, you can add `_` for readability, but not after letters:
+  * `long value = 0b0_1001;` -- *valid*
+  * `long value = 0b_0_101;` -- *invalid*
+  * `long value = 0_b0_101;` -- *invalid*
+  * `long value = _0120010;` -- *invalid*
+  * `long value = 0120010_;` -- *invalid*
+  * `long value = 012100_L;` -- *invalid*
+  * `int i = Integer.parseInt("46_54");` -- *fails at runtime*
+* By default, System.out.println() will print out a number in its decimal base.
+
+----
+###### floating point numbers
+###### chars
+
+`char char = 'D';`-- *assignment uses single quotes*
+* Double quotes are for string
+`char char = 122;` -- *valid, will assign ASCII char by number*
+`char char = '\u0122';` -- *valid, assigns chars by unicode*
+* __char__ values are all positive, but you can cast negative number to char
+
+----
+###### identifiers
+* unlimited (?) length
+* starts with letter, currency sign, or _
+* can have currency signs, but no special chars
+* can have digits, but not at the beginning
+* hyphen `-` is not allowed
+
+
+###### object reference variables
+* objects are instances of classes
+* reference type is a variable name that "points" to memory adress where an object resides
+* object reference is like a a handle that allows the access to object
+* references can point to null
+* objects can have no references, but they will get killed by garbage man
+* several reference variables can point to one object
+
+###### reference variables VS primitive variables
+* reference variables hold address of an object, but primitive type holds data
+![alt tag](Screenshot from 2016-03-26 17:43:11.png)
