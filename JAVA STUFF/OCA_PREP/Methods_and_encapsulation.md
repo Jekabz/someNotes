@@ -190,3 +190,21 @@ class Employee {
 
 ----
 #### Accessing object fields
+###### Object field
+* Object field aka instance variable
+* Use setters and getters
+
+----
+#### Encapsulation
+* By exposing object functionality only through methods, you can
+prevent your private variables from being assigned any values that don’t fit
+your requirements.
+* One of the best ways to create a well-encapsulated class is
+to define its instance variables as private variables and allow access to these
+variables using public methods
+
+###### passing objects and primitives to methods
+* Passing primitives
+  * a copy of primitive type value is passed to method
+  * the passed primitive type value cannot be altered by method
+* Passing object references
