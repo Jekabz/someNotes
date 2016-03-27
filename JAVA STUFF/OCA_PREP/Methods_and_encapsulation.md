@@ -105,4 +105,88 @@ class TestPhone {
 
 #### overloaded methods
 * Same name, different parameter list (different types or different order)
-![pic]()
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-27%2018:37:56.png)
+* easy to add methods with similar functionality
+```java
+  int intVal = 10;
+  boolean boolVal = false;
+  String name = "eJava";
+  System.out.println(intVal);
+  System.out.println(boolVal);
+  System.out.println(name);
+```
+* overloaded methods may or may no have different return type or access modifiers, it does not matter. Arg list matters
+* derived classes also can have overloaded methods
+
+###### Argument list
+* compiler may not distinguish between methods:
+```java
+class MyClass {
+  double calcAverage(double marks1, int marks2) {}
+  double calcAverage(int marks1, double marks2) {}
+
+  public static void main(String args[]) {
+    MyClass myClass = new MyClass();
+    myClass.calcAverage(2, 3); //compilation error! int can be passed to double
+  }
+}
+```
+
+----
+#### Class constructors
+* Constructor is a method that creates and returns an object of the class they are defined in
+* Constructor does not have a return type
+* Constructor has the same name as the class they are in
+
+###### user - defined constructors
+* constructor can have access modifiers: __public, default, protected, private__
+* adding a return type to a constructor will make it into another method, it will no longer be a constructor
+
+###### initializer blocks vs constructors
+* initializer block is defined within a class and not a method
+* executes __before__ the constructor
+```java
+class Foo {
+	{System.out.println("This is initializer block");}
+	Foo() {System.out.println("This is constructor");}
+}
+
+public class Bar { // if more than one class, the main() has to be in public (?)
+	public static void main(String... args) {
+		Foo foo = new Foo();
+		/*
+		This is initializer block
+		This is constructor
+		*/
+	}
+}
+```
+* initializer blocks are used to initialize the variables of __anonymous__ classes
+* __anonymous__ class is a type of inner class (advanced)
+* initializer blocks accept no arguments
+
+###### default constructor
+* if there is no user defined constructor, compiler adds it
+* else nothing
+
+###### overloaded constructors
+######invoking overloaded constructor from another constructor
+* uses this and not a name:
+```java
+class Employee {
+  String name;
+  int age;
+  Employee() {
+    // no code in this line allowed
+    this(null, 0); //this line must be the first statement
+  }
+  Employee(String newName, int newAge) {
+    name = newName;
+    age = newAge;
+  }
+}
+```
+* none of other methods in class can call a constructor of its own class, not even static methods
+
+----
+#### Accessing object fields
