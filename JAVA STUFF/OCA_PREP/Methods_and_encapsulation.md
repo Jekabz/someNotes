@@ -206,5 +206,13 @@ variables using public methods
 ###### passing objects and primitives to methods
 * Passing primitives
   * a copy of primitive type value is passed to method
-  * the passed primitive type value cannot be altered by method
+  * the passed primitive type value cannot be altered by method, because copy is passed
+  * When you pass a primitive variable to a method, its value remains the same after the execution of the method.
 * Passing object references
+  * method reassigns the object reference passed to it to another variable
+    * state of the object, which was passed on to the method, remains intact.
+    ![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-27%2023:34:45.png)
+  * method modifies the state of the object reference passed to it
+    * basically call an instance method to do something like change the state of instance
+
+ ----
