@@ -14,10 +14,10 @@
   * –32,768 to 32,767, inclusive
 * `int`
   * 32 bits
-  * –2,147,483,648 to 2,147,483,647, inclusive–2,147,483,648 to 2,147,483,647, inclusive
+  * –2,147,483,648 to 2,147,483,647, inclusive
 * `long`
   * 64 bits
-  * –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807, inclusive–9,223,372,036,854,775,808 to 9,223,372,036,854,775,807, inclusive
+  * –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807, inclusive
 * `float`
 * `double`
 * `char`
@@ -51,10 +51,11 @@
 
 `char char = 'D';`-- *assignment uses single quotes*
 * Double quotes are for string
-`char char = 122;` -- *valid, will assign ASCII char by number*
-`char char = '\u0122';` -- *valid, assigns chars by unicode*
+* `char char = 122;` -- *valid, will assign ASCII char by number*
+* `char char = '\u0122';` -- *valid, assigns chars by unicode*
 * __char__ values are all positive, but you can cast negative number to char
 * __char__ can be manipulated by arithmetic operators, because that is just a number
+
 ----
 ###### identifiers
 * unlimited (?) length

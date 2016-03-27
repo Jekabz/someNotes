@@ -52,3 +52,40 @@ class MyPhone {
 * Java classes can override finalize()
 
 ###### birth of an Object
+* when keyword __new__ is used
+```java
+class Person{}
+class Whatever{
+  Person person; //reference variable, no actual Person object is created
+  Person person1 = new Person();// creates an object and a reference variable
+}
+```
+* Strings are little different:
+```java
+class Foo{
+  String string1 = new String("foo"); // valid
+  String string2 = "bar"; // also valid
+}
+```
+```java
+class Phone {}
+class TestPhone {
+	TestPhone(){new Phone();} //object is created, but cannot be accessed
+}
+```
+###### object is accessible
+* access is done using reference variable
+* access is granted while in scope and while reference variable != null and while it is not set to point to another object
+
+###### object is inaccesible
+* You can be sure only about which objects are marked for garbage collection. You can never be sure exactly when the object will be garbage collected.
+
+----
+#### Methods with arguments and return values
+* method is used to define the behavior of an object
+* things to know about methods:
+  * return type
+  * method parameters
+  * return statement
+  * access modifiers
+  * nonaccess modifiers
