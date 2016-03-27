@@ -85,7 +85,24 @@ class TestPhone {
 * method is used to define the behavior of an object
 * things to know about methods:
   * return type
+    * type of value that method returns
+    * can be primitive type or an object of a class or an interface
+    * returned info need not be saved (assigned to a variable)
   * method parameters
+    * a comma seperated list of parameters
+    * no limit as to how many can be there
+    * method __parameters__ are the passed members, method __arguments__ are actual values that get passed
+    * arrays can be passed
+    * only __one__ ellipsis can be defined as argument and it should be the last on the list
   * return statement
+    * exits from a method with or without a value
+    * void methods can also have a return; then they end execution, but return nothing
+    * non void methods can only return non void returns
+    * No code can follow (be executed) return statement, if it does, its compilation error
+    * method can only return zero or one value
   * access modifiers
   * nonaccess modifiers
+
+#### overloaded methods
+* Same name, different parameter list (different types or different order)
+![pic]()

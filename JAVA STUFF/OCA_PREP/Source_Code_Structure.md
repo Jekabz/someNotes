@@ -150,9 +150,27 @@ public class HelloExam {
   ```
 
 ###### Java ellipsis (...)
-* These two are quvivalent:
-  * `void functionName(String[] stringArrName){}`
-  * `void functionName(String ... StringArrName){}`
+* The ellipsis ( ... ) that follows the data type indicates that the method parameter may be passed as an an array or multiple comma-separated values, or a single value:
+
+```java
+class Foo {
+	static int method(int... arg) {
+		int sum = 0;
+		for (int i = 0; i < arg.length; i++)
+			sum += arg[i];
+		return sum;
+	}
+}
+
+class Bar {
+	int a, b, c, d;
+	int[] e = { 1, 2, 3 };
+	Foo foo = new Foo();
+	int r1 = foo.method(a); // single arg BUT NOT VALID WITHOUT ELLIPSIS
+	int r2 = foo.method(a, b, c, d); // coma separeated list BUT NOT VALID  WITHOUT ELLIPSIS
+	int r3 = foo.method(e); // array
+}
+```
 
 ###### Java arrays
 * These two are quvivalent:
