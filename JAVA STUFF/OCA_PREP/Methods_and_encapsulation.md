@@ -95,6 +95,7 @@ class TestPhone {
     * arrays can be passed
     * only __one__ ellipsis can be defined as argument and it should be the last on the list
   * return statement
+    * If the return type of a method is int , the method can return a value of type byte
     * exits from a method with or without a value
     * void methods can also have a return; then they end execution, but return nothing
     * non void methods can only return non void returns
@@ -137,6 +138,7 @@ class MyClass {
 * Constructor is a method that creates and returns an object of the class they are defined in
 * Constructor does not have a return type
 * Constructor has the same name as the class they are in
+* Constructor can have  access modifiers
 
 ###### user - defined constructors
 * constructor can have access modifiers: __public, default, protected, private__

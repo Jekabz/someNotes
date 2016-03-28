@@ -291,6 +291,7 @@ public class Rectangle extends Figure
     * `static class` -- not for __top level__
     * `static intertface` -- not for __top level__
   * `final` -- for __class__ and __variable__ and __method__
+    * `final is`-- *only about the reference itself, and not about the contents of the referenced object*
     * `final class` -- *cannot be extended*
     * `final variable` -- *value is assigned only once, but you can call methods on it*
     * `final method` -- *cannot be overriden by a derived class*
