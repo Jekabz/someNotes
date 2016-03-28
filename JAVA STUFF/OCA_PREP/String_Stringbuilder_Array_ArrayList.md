@@ -2,6 +2,7 @@
 
 #### String class
 * resides in Java.lang package
+
 ###### Create string objects
 * the `==` compares adresses in two reference Variables
  ```Java
@@ -197,4 +198,49 @@ initializedToNull += "Java"; // nullJava
     int []arr5Name[] = new int[2][]; //this is OK
     int []arr5Name[] = new int[[2];  //this is not OK
 ```
-![pic]()
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-28%2022:45:14.png)
+* Once allocated, all the array elements store their default values
+
+###### Array initialization
+* Java compiler does not check the rannge of index positions, so this compiles ok:
+```Java
+int arr[] = new int[2];
+char w = 't';
+System.out.println(arr[-5]); //compiles ok
+System.out.println(arr['D']); //compiles ok
+System.out.println(arr[w]); //compiles ok
+```
+* to access arr positions, you need to pass in char , byte , short , or int
+
+###### declaration, allocation and initialization combo
+* `type name[] = {val, val};`
+```Java
+int intArray[] = new int[]{0, 1};
+int intArray[] = {0, 1};
+
+String[] strArray = new String[]{"Summer", "Winter"};
+String[] strArray = {"Summer", "Winter"};
+
+int multiArray[][] = new int[][]{ {0, 1}, {3, 4, 5}};
+int multiArray[][] = { {0, 1}, {3, 4, 5} };
+```
+* Size of array does not need and cannot be specified, its calculated by input
+
+```Java
+//valid:
+int intArray[];
+intArray = new int[]{0, 1};
+
+//not valid:
+int intArray[];
+intArray = {0, 1};
+```
+
+###### asymmetrical multidimensional arrays
+###### interface, abstract class and class arrays
+* __interface array__
+  *
+* __abstract class array
+  *
+* __object array__
+  * 
