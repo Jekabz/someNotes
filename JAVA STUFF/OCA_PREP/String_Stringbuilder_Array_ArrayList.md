@@ -99,7 +99,7 @@ initializedToNull += "Java"; // nullJava
 
 ###### StringBuilder methods
 ![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-28%2018:58:53.png)
-* `charAt` `indexOf` `substring` `lenght` work exactly like their String counterparts
+* `charAt` `indexOf` `subString` `lenght` work exactly like their String counterparts
 * `append()`
   * puts the specified value at the end of the existing value
   * overloaded to accept different data types, including arrays: `sb.append(arrName, int inclStartPos, int inclEndPos);`
@@ -139,4 +139,62 @@ initializedToNull += "Java"; // nullJava
   }
   ```
   * String.replace() vs StringBuilder.replace()
-    ![pic]()
+    ![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-28%2020:31:20.png)
+* `subSequence()`
+  * returns type CharSequence
+  ```Java
+  StringBuilder sb1 = new StringBuilder("0123456");
+  System.out.println(sb1.subSequence(2, 4)); //32
+  System.out.println(sb1); //0123456
+  ```
+
+----
+#### StringBuffer
+* StringBuffer methods are only executable by one thread at a time, so possible inconsistencies are avoided at the cost of lower performance
+* Otherwise, StringBuffer is same as StringBuilder
+* If you need to access your code from multiple threads, use StringBuffer otherwise use StringBuilder
+
+----
+### Arrays
+* Array is an object
+* Arrays can store:
+  * primitive data types (stores actual values)
+  * objects (stores memory adresses / references)
+* Array members are stored in contineous memory locations, thus improving speed
+
+###### Array declaration
+* Square brackets can follow type or name or both:
+```Java
+    int[] arr1Name;
+		int arr2Name[];
+		int[][] arr3Name;
+		int arr4Name[][];
+		int []arr5Name[];
+```
+* Specifying the size at declaration is invalid:
+```Java
+    //compilation err:
+		int[3] arr1Name;
+		int arr2Name[1];
+		int[8][] arr3Name;
+```
+* Arr types:
+  * primitive data type
+  * interfaces
+  * abstract classes
+  * concrete class (simply not ans abstract one)
+  * arr cannot be of type __null__
+
+######Array allocation
+* Size of array cannot change once allocated
+* keyword `new` is needed, because Arr is an object
+```Java
+		int[] arr1Name = new int[3];
+		int arr2Name[] = new int[3];
+		int[][] arr3Name = new int[2][2];
+		int arr4Name[][] = new int[2][2] ;
+		int []arr5Name[] = new int[2][2];
+    int []arr5Name[] = new int[2][]; //this is OK
+    int []arr5Name[] = new int[[2];  //this is not OK
+```
+![pic]()
