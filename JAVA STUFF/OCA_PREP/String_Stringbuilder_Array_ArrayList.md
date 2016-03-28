@@ -98,4 +98,45 @@ initializedToNull += "Java"; // nullJava
 * String constructor makes char[str.lenght()+16]
 
 ###### StringBuilder methods
-![pic]()
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-28%2018:58:53.png)
+* `charAt` `indexOf` `substring` `lenght` work exactly like their String counterparts
+* `append()`
+  * puts the specified value at the end of the existing value
+  * overloaded to accept different data types, including arrays: `sb.append(arrName, int inclStartPos, int inclEndPos);`
+  * also accepts __Object__, but when sb is printed, it would give `ClassName@hashcode`, because it calls targets toString(), that might not be overriden
+* `insert()`
+  * also overloaded
+  * allows to insert data at a particular position
+  ```Java
+  class InsertStringBuilder {
+    public static void main(String args[]) {
+      StringBuilder sb1 = new StringBuilder("Bon");
+      sb1.insert(2, 'r');
+      System.out.println(sb1); //Born
+    }
+  }
+  ```
+  ```Java
+    StringBuilder sb1 = new StringBuilder("123");
+    char[] name = {'J', 'a', 'v', 'a'};
+    sb1.insert(1, name, 1, 3); // after the first index in sb1, insert chars in range from 1(incl) to 3(incl) from name
+    System.out.println(sb1); // 1ava23
+  ```
+* `delete() and deleteCharAt()`
+  * delete(int inclusiveStart, int nonInclusiveFin) removes chars in a substring
+  * deleteCharAt removes char at a specific position
+* `trim()` -- no such method in StringBuilder
+* `reverse()` -- 123 -> 321
+  * All at once, no reversing for substrings
+* `replace()`
+  ```Java
+  class ReplaceStringBuilder {
+    public static void main(String args[]) {
+      StringBuilder sb1 = new StringBuilder("0123456");
+      sb1.replace(2, 4, "ABCD");
+      System.out.println(sb1); //01ABCD456
+    }
+  }
+  ```
+  * String.replace() vs StringBuilder.replace()
+    ![pic]()
