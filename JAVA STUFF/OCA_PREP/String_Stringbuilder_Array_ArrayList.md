@@ -16,5 +16,5 @@
  * This is so, because in jvm, there is a `pool` of string objects
  * if no object "bar" can be found in pool, a new "bar" object is created
  * if "bar" can be found, a new reference is made to it instead
- ![pic]()
- ![pic]()
+ ![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-28%2015:12:23.png)
+ ![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-28%2015:12:35.png)
