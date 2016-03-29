@@ -274,22 +274,49 @@ Vehicle[] vehicleArray = {
   * Any class in Java extends java.lang.Object, so Object arr can have any class in it:
 
 ```Java
-    interface MyInterface {}
-    class MyClass1 implements MyInterface {}
-    abstract class Vehicle{}
-    class Car extends Vehicle {}
-    class Test {
-       Object[] objArray = new Object[] {
-          new MyClass1(),
-          null, // null is valid
-          new Car(),
-          new java.util.Date(),
-          new String("name"),
-          new Integer [7] // Other arrays are valid
-        };
-    }
+interface MyInterface {}
+class MyClass1 implements MyInterface {}
+abstract class Vehicle{}
+class Car extends Vehicle {}
+class Test {
+   Object[] objArray = new Object[] {
+      new MyClass1(),
+      null, // null is valid
+      new Car(),
+      new java.util.Date(),
+      new String("name"),
+      new Integer [7],   // Other arrays are valid (no coma is needed)
+    };
+}
 ```
-![pic]()
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-29%2013:06:56.png)
 
-###### Members of an array
-*
+###### Members of an array class
+* public:
+  * `lenght` -- *hom many items in an arr, counting from 1*
+  * `clone()` -- *overrides Object.clone(), returns another array of the same type*
+
+* STRING LENNGHT() VS ARR LENGHT:
+  * `lenght()` -- *For strings, use method!*
+  * `lenght` -- *For arrs, use variable*
+
+----
+#### ArrayList
+* Comes from Java Collections framework
+* Arraylist automatically changes its size as elements are added or removed
+* No need to specify the initial size
+  * It implements the interface List.
+  * It allows null values to be added to it.
+  * It implements all list operations ( add , modify , and delete values).
+  * It allows duplicate values to be added to it.
+  * It maintains its insertion order.
+  * You can use either Iterator or ListIterator (an implementation of theIterator interface) to iterate over the items of an ArrayList .
+  * It supports generics, making it type safe. (You have to declare the type of the elements that should be added to an ArrayList with its declaration.)
+
+###### Creating an ArrayList
+* Both are valid:
+  * `ArrayList<String> myArrList = new ArrayList<String>();`
+  * `ArrayList<String> myArrList = new ArrayList<>();`
+  * `ArrayList myArrList2 = new ArrayList();` -- *generics is not obligatory*
+
+###### Adding elements to Arraylist
