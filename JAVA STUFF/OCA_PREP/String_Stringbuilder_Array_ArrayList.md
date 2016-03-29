@@ -130,6 +130,7 @@ initializedToNull += "Java"; // nullJava
 * `reverse()` -- 123 -> 321
   * All at once, no reversing for substrings
 * `replace()`
+
   ```Java
   class ReplaceStringBuilder {
     public static void main(String args[]) {
@@ -139,6 +140,7 @@ initializedToNull += "Java"; // nullJava
     }
   }
   ```
+
   * String.replace() vs StringBuilder.replace()
     ![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-28%2020:31:20.png)
 * `subSequence()`
@@ -239,8 +241,55 @@ intArray = {0, 1};
 ###### asymmetrical multidimensional arrays
 ###### interface, abstract class and class arrays
 * __interface array__
-  *
-* __abstract class array
-  *
+  * Array of classes that implement the same interface:
+  ```Java
+interface MyInterface {}
+class MyClass1 implements MyInterface {}
+class MyClass2 implements MyInterface {}
+class Test {
+MyInterface[] interfaceArray = new MyInterface[]
+  {
+    new MyClass1(),
+    null, // null is allowed
+    new MyClass2()
+  };
+}
+  ```
+
+* __abstract class array__
+  * Array of classes that extends the same abstract class:
+  ```Java
+abstract class Vehicle{}
+class Car extends Vehicle {}
+class Bus extends Vehicle {}
+class Test {
+Vehicle[] vehicleArray = {
+  new Car(),
+  new Bus(),
+  null}; //null is allowed
+}
+```
+
 * __object array__
-  * 
+  * Any class in Java extends java.lang.Object, so Object arr can have any class in it:
+
+```Java
+    interface MyInterface {}
+    class MyClass1 implements MyInterface {}
+    abstract class Vehicle{}
+    class Car extends Vehicle {}
+    class Test {
+       Object[] objArray = new Object[] {
+          new MyClass1(),
+          null, // null is valid
+          new Car(),
+          new java.util.Date(),
+          new String("name"),
+          new Integer [7] // Other arrays are valid
+        };
+    }
+```
+![pic]()
+
+###### Members of an array
+*
