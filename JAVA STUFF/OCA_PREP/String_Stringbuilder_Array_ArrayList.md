@@ -320,3 +320,49 @@ class Test {
   * `ArrayList myArrList2 = new ArrayList();` -- *generics is not obligatory*
 
 ###### Adding elements to Arraylist
+* elements can be added wherever:
+```java
+import java.util.ArrayList;
+public class AddToArrayList {
+  public static void main(String args[]) {
+    ArrayList<String> list = new ArrayList<>();
+    list.add("one");
+    list.add("two");
+    list.add("four");
+    list.add(2, "three");
+  }
+}
+```
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-03-29%2022:33:52.png)
+* adding first checks for empty slots, if no empty slots, makes a new bigger arr within Arraylist
+
+###### Accessing elements of ArrayList
+* enhanced __for__ loop:
+```java
+for (String element : myArrList) {
+System.out.println(element);
+}
+```
+
+* ListIterator:
+```java
+ListIterator<String> iterator = myArrList.listIterator();
+  while (iterator.hasNext()) { // method returns boolean
+  System.out.println(iterator.next());
+}
+```
+* Iterator
+* An iterator ( Iterator or ListIterator ) lets you remove elements as you iterate an ArrayList.
+* It’s not possible to remove elements from an ArrayList while iterating it using a for loop.
+
+###### Modifying elements of ArrayList
+
+###### Deleting elements of ArrayList
+###### Other methods of ArrayList
+* Adding multiple elements to an ArrayList
+* Clearing elements of ArrayList
+* Accessing individual ArrayList elements
+* Cloning an ArrayList
+* Create an array from an ArrayList
+
+----
