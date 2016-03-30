@@ -363,6 +363,7 @@ ListIterator<String> iterator = myArrList.listIterator();
 arrList.set(1, "foobar"); //replaces elenent at position 1 with string
 ```
 * modify multiple values
+
 ###### Deleting elements of ArrayList
 * `remove(int)` -- *removes element at position int*
 * `remove(Object obj)` -- *removes first occurance of (not type, but instance of specific name) element, if present*
