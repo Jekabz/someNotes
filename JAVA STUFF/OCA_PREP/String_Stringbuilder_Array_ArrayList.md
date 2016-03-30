@@ -105,6 +105,7 @@ initializedToNull += "Java"; // nullJava
   * puts the specified value at the end of the existing value
   * overloaded to accept different data types, including arrays: `sb.append(arrName, int inclStartPos, int inclEndPos);`
   * also accepts __Object__, but when sb is printed, it would give `ClassName@hashcode`, because it calls targets toString(), that might not be overriden
+
 * `insert()`
   * also overloaded
   * allows to insert data at a particular position
@@ -382,6 +383,19 @@ arrList.set(1, "foobar"); //replaces elenent at position 1 with string
   * `lastIndexOf(Object o)` -- *-1 if no element is found*
 
 * Cloning an ArrayList
+  * `clone()`
+  * returns a __shallow copy__ of ArrayList instance
+    * __shallow copy__ creates a new instance of an object, and copies its elenent references, but does not copy referenced objects (no new dogs are created)
 * Create an array from an ArrayList
+  * `String[] foo = (String[]) yourArrList.toArray();`
 
 ----
+
+#### Comparing objects for equality
+* java.lang.Object has method equals(), so every class has this method
+* default implementation only compares two obj references - do they refer to the same object?
+* comparing objects of a user defined class
+
+###### incorrect method signature of the equals method
+* equals has to accept an object
+* when overriding `equals()`, `hashCode()` also needs overriding
