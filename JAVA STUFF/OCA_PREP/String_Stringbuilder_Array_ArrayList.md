@@ -304,6 +304,7 @@ class Test {
 #### ArrayList
 * Comes from Java Collections framework
 * Arraylist automatically changes its size as elements are added or removed
+* Arraylist can have dublicat objects
 * No need to specify the initial size
   * It implements the interface List.
   * It allows null values to be added to it.
@@ -356,12 +357,30 @@ ListIterator<String> iterator = myArrList.listIterator();
 * It’s not possible to remove elements from an ArrayList while iterating it using a for loop.
 
 ###### Modifying elements of ArrayList
-
+* modify single value
+```java
+arrList.set(1, "foobar"); //replaces elenent at position 1 with string
+```
+* modify multiple values
 ###### Deleting elements of ArrayList
+* `remove(int)` -- *removes element at position int*
+* `remove(Object obj)` -- *removes first occurance of (not type, but instance of specific name) element, if present*
+
 ###### Other methods of ArrayList
 * Adding multiple elements to an ArrayList
+  * `addAll(int index, Collection<? extends E> c);`
+  * Adds multiple elements starting with an index(for the arrlist being inserted into) from another subclass of Collection in the order they are returned by another Collections Iterator
+
 * Clearing elements of ArrayList
+  * `myArrList.clear();` -- *removes all elements from myArrList*
+
 * Accessing individual ArrayList elements
+  * `get(int id)` -- *returns element at specific position*
+  * `size()` -- *number of elements in ArrayList*.
+  * `contains(Object o)` -- *returns index of the first occurance of o or -1, if not found*
+  * `indexOf(Object o)` -- *-1 if no element found*
+  * `lastIndexOf(Object o)` -- *-1 if no element is found*
+
 * Cloning an ArrayList
 * Create an array from an ArrayList
 
