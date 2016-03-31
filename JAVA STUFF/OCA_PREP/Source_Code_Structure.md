@@ -239,6 +239,10 @@ public class HelloWorld {
 * nonaccess modifiers are:
   * `abstract` -- for __class__ and __metods__
     * class can not be instantiated. It can or cannot define any abstract methods. Non abstract classes cannot contain abstract methods
+    * An abstract class can extend a concrete class and vice versa.
+    * An abstract class can implement interfaces.
+    * An abstract class can extend another abstract class.
+    * The first concrete class in the hierarchy must supply actual method implementations for all abstract methods
     * `abstract interface` -- `intertface` is abstract by default, so the following two are the same:
       * `interface Foo{}`
       *  `abstract interface Foo{}`
