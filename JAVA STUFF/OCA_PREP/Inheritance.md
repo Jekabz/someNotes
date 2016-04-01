@@ -143,3 +143,84 @@ class Whatever extends Foo implements Baar {
 * with this reference variable, you can access all the variables and methods that are defined in its base class and interface
 
 ###### using variable of base class type to access object of derived class type
+* this kind of reference only has access to members that are inherited from the base class. No interface methods and derived class members are accessible
+
+###### using variable of an implemented interface to access a derived (implemented) class object
+* this kind of reference can only access members defined in the implemented interfaces
+
+###### why access an object by its base class or implemented interface?
+* You may not be concerned about the details -- base class
+* You may only be interested in specific implementation of interface -- use interface
+* You can make an array of different objects this way
+
+----
+#### Casting
+* casting allows to get to other members, if object is referred to by superclass or an interface
+`type name = ((ChildClass)SuperclassReference).variableName;`
+
+#### this and super
+* __this__ and __super__ are implicit object references, these variables are defined and initialized by the JVM for every object in its memory
+
+###### this
+* points to objects own instance
+* `this` may be used to differentiate between an instance variable and some local or method variable or parameter
+
+###### using this to access constructors
+```java
+class ClassName{
+  String string;
+  ClassName(String string){
+    this.string = string;
+  }
+  ClassName(String string, String foo){
+    this(string); //calls previous constructor
+  }
+}
+```
+* You can also call the default constructor from within another constructor, but then it has to be the first statement in it( not even if is allowed):
+```java
+ClassName(whatever){
+  this(); //must be the first statement
+  //whatever
+}
+```
+
+* __this__ refers to the instance of the class in which it’s used. this can be used to access the inherited members of a base class in the derived class.
+
+###### object reference super
+* __super__ refers to the parent of a class
+* you can use super to access the member of a parent class in case of a name clash
+
+###### using super to access the constructors of a base class
+* if present, a call to a parent class constructor must be the first statement in a child class constructor, otherwise, the call to super(); is automatically inserted by the compiler
+
+###### using super and this in static methods
+* super and this are implicit object references, but static members belong to a class itself, therefore it is not possible to use super and this for static members
+
+----
+
+#### Polymorphism
+###### Polymorphism with classes
+* class inherits from another class and both of them have methods with the same signature. Java will execute the method that belongs to reference variable type class
+* Basically you got an abstract class and it has an abstract method. the abstract method is implemented by the child classes. These classes are having the abstract class type reference variable. This variable is used to call the methods, which then have different implementations. Now you got Polymorphism!
+
+###### polymorphic methods are also called overriden methods
+* @ Override is not used, because class inherits from an abstract class and has an abstract method, instead "overriden" simply refers to the fact that the method signatures are identical!
+* @ Override must be used if overriding concrete class though!
+* __polymorphic methods do not always have to be abstract__
+* the return type of overriden method in child class can be a subclass of parent class method's return type
+* child class version of the method has to hava same or less restrictive access modifiers
+
+###### variable and method binding in compile and runtime
+* variables bind at compile time, whereas methods bind at runtime
+* variables:
+  * the reference type determines, which variable (base or child) will be used
+* methods:
+  * will execute the overriden method in child class
+
+----
+#### Polymorphism with interfaces
+* always involves abstract methods, because interface
+* if you refer to objects by interface, these objects can have and does have different implementation for abstract methods defined in interface. therefore by calling interface methods on different objects, one method will return different behaviours!
+
+----
