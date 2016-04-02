@@ -76,5 +76,11 @@ public class ReThrowException {
 #### exception types
 * exceptions:
   * Runtime exception
+    * do not catch them
   * Checked exception
   * error
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-02%2015:02:47.png)
+
+###### checked exception
+* Checked exception is an unacceptable condition that is foreseen by the author of the method, but is outside of control, like file not found.
+* Subclass of java.lang.RuntimeException
