@@ -79,11 +79,57 @@ public class ReThrowException {
     * do not catch them
   * Checked exception
   * error
+
 ![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-02%2015:02:47.png)
 ![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/classjava_1_1lang_1_1Throwable__inherit__graph.png)
 * Anything that is a subclass of Exception except for RuntimeException and its subclasses is a __checked exception__.
 
 
 ###### checked exception
-* Checked exception is an unacceptable condition that is foreseen by the author of the method, but is outside of control, like file not found.
-* Subclass of java.lang.Exception, not a Subclass of java.lang.RuntimeException
+* Checked exception is an unacceptable condition that is __foreseen__ by the author of the method, but is outside of control, like file not found.
+* if a method that uses another method that may throw a checked exception, you need to make shure that:
+  * method is enclosed in try-catch __or__
+  * method specifies this exception to be thrown in its method signature
+
+###### runtime exception aka unchecked exception
+* Runtime exception is a representation of a programming error
+* Runtime exception can not be a part of method signature
+* Runtime exceptions can be caught
+
+###### errors
+* serious exception thrown by JVM
+* needs not be a part of method signature, errors are not needed to be caught
+* can be caught by an exception handler:
+```java
+try{
+  myMethod();
+}
+catch (StackOverflowError s){
+  // do something
+}
+```
+
+#### common exception classes and categories
+
+* ArrayIndexOutOfBoundsException and IndexOutOfBoundsException
+  * When you try to access an invalid array position, ArrayIndexOutOfBoundsException is thrown
+  * When you try to access an invalid ArrayListposition, IndexOutOfBoundsException is thrown.
+* ClassCastException
+  * ClassCastException is thrown when an object fails an IS-A test with the class type to which it’s being cast
+  * You can use the instanceof operator to verify whether an object can be cast to another class before casting it
+* IllegalArgumentException
+  * ArgumentException is thrown to specify that a method has passed illegal or inappropriate arguments
+* IllegalStateException
+  * As an author of code, you can throw IllegalStateException to signal to the calling method that the method being requested for execution can’t be called for the current state of an object.
+* NullPointerException
+  * This exception is thrown by the JVM if you try to access a method or a variable with a null value
+* NumberFormatException
+  * fails to convert from String to number
+* ExceptionInInitializerError
+* StackOverflowError
+* NoClassDefFoundError
+  * Not a coding issue, check your classpath
+* OutOfMemoryError
+  * Runs out of __heap__ memory, can make no new objects
+
+----
