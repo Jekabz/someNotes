@@ -80,7 +80,10 @@ public class ReThrowException {
   * Checked exception
   * error
 ![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-02%2015:02:47.png)
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/classjava_1_1lang_1_1Throwable__inherit__graph.png)
+* Anything that is a subclass of Exception except for RuntimeException and its subclasses is a __checked exception__.
+
 
 ###### checked exception
 * Checked exception is an unacceptable condition that is foreseen by the author of the method, but is outside of control, like file not found.
-* Subclass of java.lang.RuntimeException
+* Subclass of java.lang.Exception, not a Subclass of java.lang.RuntimeException
