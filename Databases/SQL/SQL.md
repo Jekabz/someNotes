@@ -22,8 +22,11 @@
 SELECT DISTINCT --DISTINCT will only return unique values in all columns
 columnname1, columnname2, columnnameN
 FROM Tablename
-WHERE columnname1 operator value
-ORDER BY columnnamex ASC, columnnamey DESC -- you can also sort data by the column that is not selected and by multiple columns, sort sequence is as specified, first column first, followed by others. You can substitute columnname by collumnposition in select list (number)
+WHERE columnname1 operator value -- `string`
+ORDER BY columnnamex ASC, columnnamey DESC
+/* you can also sort data by the column that is not selected and by multiple columns,
+sort sequence is as specified, first column first, followed by others. You can
+substitute columnname by collumnposition in select list (number) */
 LIMIT 5 -- return no more than 5 rows
 OFFSET 5 -- last row still to be excluded. No offset is possible without limit
 ; -- ends with semicolin!
@@ -40,4 +43,6 @@ comment
 ###### Sorting data
 ###### Filtering data
 * operators for `WHERE`:
-![pic]()
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-04%2022:19:17.png)
+
+###### Advanced data filtering
