@@ -26,3 +26,36 @@
   * `TIMESTAMP` holds valuse from 1970 - 2037, `DATETIME` holds just about everything
   ![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-05%2001:28:29.png)
 * __AUTO_INCREMENT__ data type:
+  * Causes MySQL to set a unique valu for this column in every row
+
+###### Adding data to a table
+`INSERT INTO tableName(column1, coulmn2)VALUES('val', 'val');`
+
+###### Rename a table
+`ALTER TABLE nameOld RENAME nameNew;`
+
+###### Change column data type
+`ALTER TABLE tableName MODIFY columnName NEWTYPE;`
+
+###### Add a new column
+`ALTER TABLE tableName ADD newColumnName NEWTYPE;`
+
+###### Rename a column
+`ALTER TABLE tableName CHANGE columnOldName columnNewName TYPE; `
+
+###### Removing a column
+`ALTER TABLE tableName DROP coolumnName;`
+
+###### Remove table
+`DROP TABLE tableName`
+
+----
+#### INDEXES
+* improves search speed and querie performance a __lot__
+
+###### Create an index
+* Different INDEX types are:
+  * INDEX
+  * PRIMARY KEY
+  * FULLTEXT
+`ALTER TABLE tableName ADD INDEX(columnName(int firstNCharsToBeIndexed));` -- integers do not need limit
