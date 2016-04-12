@@ -1,6 +1,6 @@
 # GENERIC COLLECTIONS
 
-![pic]()
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-12%2016:52:23.png)
 * collection i a data structure and an object
 * it holds references to objects of its own type
 
