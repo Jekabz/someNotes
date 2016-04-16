@@ -74,3 +74,65 @@ startActivity(intent);
 * you dont really need to do this as activity lifecycle is managed by the Android OS
 
 ######Managing the Activity lifecycle
+* Activity can exist in 3 states:
+  * Resumed
+    * The activity is in the foreground and has user focus
+    * In other words, it is running
+  * Paused
+    * Another activity is in the foreground, but this one is still visible (the Another activity does not cover this activity fully)
+    * Can be killed by system if low memory
+  * Stopped
+    * The activity is completely obscured by another activity
+
+######Implementing the lifecycle callbacks
+```Java
+public class ExampleActivity extends Activity {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // The activity is being created.
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // The activity is about to become visible.
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // The activity has become visible (it is now "resumed").
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Another activity is taking focus (this activity is about to be "paused").
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // The activity is no longer visible (it is now "stopped")
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // The activity is about to be destroyed.
+    }
+}
+```
+* Your implementation should always call the superclass implementation first
+* __activity lifecycle__ has 3 nested loops:
+  *__entire lifetime__
+    * in between `onCreate()` and `onDestroy()`
+    * does the setup in `onCreate()`
+    * release resources in `onDestroy`
+  *__visible lifetime__
+    * in between `onStart()` and `onStop()`
+    * this can happen multiole times in an entire lifetime
+  *__foreground lifetime__
+    * in between `onResume()` and `onPause()`
+    * during this time, activity is in front of all other activities and has the user focus
+    * Because this state can transition often, the code in `onResume()` and `onPause()` should be fairly lightweight
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-16%2019:48:00.png)
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-16%2020:56:05.png)
+
+######Saving activity state
