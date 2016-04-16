@@ -4,11 +4,10 @@
 * single core multithreading is ok, if some thread may block the execution of other threads. In this case program is allowed to continue, something that is otherwise impossible
 
 ----
-* Threads run in parallel
+8 Threads run in parallel
 
 ####Lifecycle of a thread
 * Thread Lifecycle has multiple stages:
-
 ![lc](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-16%2023:18:47.png)
 * `New` -- not doing anything jet
 * `Runnable` -- executes the task
