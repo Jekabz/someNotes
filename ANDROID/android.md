@@ -82,3 +82,4 @@
 
 ----
 ####Resource organization in Android Studio
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-16%2019:19:42.png)
