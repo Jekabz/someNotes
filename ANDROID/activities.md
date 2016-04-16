@@ -136,3 +136,11 @@ public class ExampleActivity extends Activity {
 ![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-16%2020:56:05.png)
 
 ######Saving activity state
+* When activity is paused or stopped, the state of activity is retained
+* `onSaveInstanceState()` is called before maybe destroying the activity due to low memory
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-16%2021:09:56.png)
+* never try to save persistent data with `onSaveInstanceState()`, because it is not guaranteed to run, instead use `onPause()` to do this
+* __NOTE__ when screen rotates, system destroys and recreates the activity, to apply any alternative resources that might be available
+
+######Handling the configuration changes
+* when configuration changes (sreen rotation, language etc), android recreates the activity by calling `onDestroy()` and `onCreate()`
