@@ -83,3 +83,24 @@
 ----
 ####Resource organization in Android Studio
 ![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-16%2019:19:42.png)
+
+----
+####Acessing resources
+* When app is compiled, __R__ class is generated, that contains __ids__ for all resources in __res/__
+* You use __R__ class to access the resources by path or id:
+```Java
+ImageView imageView = (ImageView) findViewById(R.id.myimageview);
+imageView.setImageResource(R.drawable.myimage);
+```
+
+----
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string  name="hello">Hello, World!</string>
+</resources>
+```
+```Java
+TextView msgTextView = (TextView) findViewById(R.id.msg);
+msgTextView.setText(R.string.hello);
+```
