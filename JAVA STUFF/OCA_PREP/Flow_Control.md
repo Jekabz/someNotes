@@ -96,6 +96,13 @@ for(Iterator<String> i = myList.iterator(); i.hasNext();)
 for (String val : myList)
   System.out.println(val);
 ```
+* Enhanced for loop for 2d arr:
+```java
+for (double[] row : a)
+    for (double value : row)
+        // do something with value
+```
+
 * You can read the colon (:) as "in"
 ```java
 for(type<generics>name : collection);

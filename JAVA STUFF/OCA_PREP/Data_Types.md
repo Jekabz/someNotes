@@ -26,6 +26,19 @@
   * __true__ or __false__, nothing else
 
 ----
+###### Conversions between Numeric types
+* Solid arrow -- no information loss
+* Dotted arrow -- information loss
+* note: these are no `casts`:
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-17%2012:39:54.png)
+* When two values are combined with a binary operator (for ex. a + b), both operands and result is converted to a common type before the operation:
+  * `double` + (`double`)whatever
+  * `float` + (`float`)notDouble
+  * `long` + (`long`)notDoubleFloat
+  * else both operands are converted to `int`
+* no casts between `boolean` and numeric types
+
+----
 ###### whole numbers
 * You can assign integer literals in different  numberic systems:
 * This works with byte, short, int and long
@@ -46,7 +59,9 @@
 
 ----
 ###### floating point numbers
-`float a = 10.0f;` -- *correct*
+* `float a = 10.0f;` -- *correct*
+* Floating-point numbers are not suitable for financial calculations in which roundoff errors cannot be tolerated, instead use `BigDecimal`
+
 ###### chars
 
 `char char = 'D';`-- *assignment uses single quotes*
@@ -55,6 +70,20 @@
 * `char char = '\u0122';` -- *valid, assigns chars by unicode*
 * __char__ values are all positive, but you can cast negative number to char
 * __char__ can be manipulated by arithmetic operators, because that is just a number
+* Unicode escape sequences are processed before the code is parsed, therefore `public static void main(String\u005B\u005D args)` is valid
+* in comments, be careful of `\u`, because this will expect a unicode value and if no unicode, synthax err occurs
+
+######Unicode
+* In Java, the char type describes a code unit in the UTF-16 encoding.
+* strong recommendation is not to use the char type in your programs unless
+you are actually manipulating UTF-16 code units.
+* You are almost always better off treating strings
+
+######boolean
+```java
+int x = 1;
+if (x = 2){} // Type mismatch: cannot convert from int to boolean
+```
 
 ----
 ###### identifiers
@@ -95,6 +124,7 @@ int bar = (int)foo;
 		a = ++a + a + --a- --a + a++; //32
 		b = 10 + 11 + 11 - 10 + 9 +1;  //32
 ```
+* Note that integer division by 0 raises an exception, whereas floating-point division by 0 yields an infinite or NaN(not a number) result
 
 ----
 ###### relational operators

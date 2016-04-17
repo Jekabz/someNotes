@@ -52,6 +52,8 @@
 * `int length()` -- *returns int how many chars are in String. Starts counting from 1*
 * `boolean startsWith(String startSequence, int startPosition)` -- *true if string from startPosition mach startSequence*
 * `boolean endsWith(String endSequence)` -- *true if ... you get it*
+* `String join(CharSequence delimeter, CharSequence ... elements)` -- *returns a new string joining all elements with the given delimeter*
+* `CharSequence` -- *Interface type to which all strings belong*
 
 ###### method chaining()
 * this is valid:
@@ -76,13 +78,18 @@ initializedToNull += "Java"; // nullJava
 ```
 
 ###### determining equality of Strings
-* `stringOne.equals(stringTwo);` -- *use this!*
-* `stringOne == stringTwo` -- *do not use this!*
+* `stringOne.equals(stringTwo);` -- *use this! Compares the values in the string pool*
+* `stringOne == stringTwo` -- *do not use this! It checks if two strings are stored in the same location, however multiple copies of identical strings can be stored in several places, because other strings can be result of some operation, like substring*
+
+###### empty and Null strings
+* __empty string__ is of lenght 0, it holds "", so its reference points to an empty, existing string
+* __null string__ this reference points to nothing
 
 ----
 #### StringBuilder
 * package java.lang
 * use StringBuilder when dealing with large strings or need to modify the contents of a String often, StringBuilder impruves performance for this
+* Use with single thread
 
 ###### StringBuilder class is in fact mutable
 * uses non-final char[] to store its value
@@ -151,6 +158,7 @@ initializedToNull += "Java"; // nullJava
   System.out.println(sb1.subSequence(2, 4)); //32
   System.out.println(sb1); //0123456
   ```
+* `String toString()` -- *returns a string with the same data as the builder or buffer contents.*
 
 ----
 #### StringBuffer
@@ -167,6 +175,13 @@ initializedToNull += "Java"; // nullJava
 * Array members are stored in contineous memory locations, thus improving speed
 
 ###### Array declaration
+* You can have Arrays of lenght 0:
+  `new type[0];`
+* Compare arrs like this:
+  `static boolean equals(type[] a, type[] b);`
+* Array of number is on declaration initialized with zeros
+* Array of objects is on declaration initialized with nulls
+* Array of boolean is on declaration initialized with false
 * Square brackets can follow type or name or both:
 ```Java
     int[] arr1Name;
