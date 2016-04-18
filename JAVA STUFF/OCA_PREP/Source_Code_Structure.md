@@ -36,6 +36,9 @@ class ClassName {
 * Classes that are compiled in the same dir. A class in package is implicitly imported in other classes of package, so import declaration is not needed.
 * All classes are a part of some package. If no package is defined, class belongs to default package, wich does not have a name
 * package declaration is the first (non comment) statement in class definition, and there can only be one
+* Main reason for packages is to guarantee unique class names
+* if you need to use two classes with the same name from several packages, use the full package name
+* `sealed package` -- you cannot add more classes to it
 
 ###### import statement
 * Classes and Interfaces in the same package can use each other without imports
@@ -196,6 +199,8 @@ class Bar {
 ###### Classpath and packages
 * Allows the JVM to find your classes
 * Classpath is .classpath file in the main project directory, which contains paths in xml format.
+* classpath is collection of all directories and archive files that are starting points for locating classes
+*
 
 ###### import packages statement
 * import lets you use simple name instead of fully qualified name for classes and interfaces in different packages

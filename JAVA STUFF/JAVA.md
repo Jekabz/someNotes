@@ -106,7 +106,7 @@ final int HEAD_COUNT = 1;
 * `static` means that fields and methods belong to the class rather than an instance of the class
 * `static` attributes are the same and shared between all objects of the class
 * `static` method of class can be accessed just by class name, without creation of class instance
-* `static` initialization blocks contain code that is only run once and can initialize static variables
+* `static` initialization blocks contain code that is only run once (when the object of a class is created) and can initialize static or other variables
 
 ###### TYPE CASTING
 
