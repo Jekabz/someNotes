@@ -26,7 +26,7 @@ public interface Foo<T>{
 
 ----
 ######What if method with the same name is declared in an interface and a superclass or another interface?
-* superclass wins
+* superclass wins, not really
 * with interfaces, you must resolve the conflict by overriding that method, `default` or not, it does not matter:
 ```Java
 interface Named
