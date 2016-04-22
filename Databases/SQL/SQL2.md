@@ -1,4 +1,4 @@
-#SQL
+#SQL INTRO AND DATA TYPES
 
 ######Wiew
 * `view` -- a subset of a database that an application can process. It may contain parts of one or more tables.
@@ -139,7 +139,8 @@ CREATE TABLE CUSTOMER (
   * `private` -- *available to UDT itself*
   * `protected` -- *available to UDT itself and its subtypes*
 * behaves like a __class__
-* There are two types of UDT:
+* There are two types of UDT
+
   *__Distinct types___:
     * Simpler than __Structured types__
     * a single data type
@@ -170,4 +171,30 @@ CREATE TYPE Foo AS  -- create UDT
 Title CHAR(40),     -- attribute
 COST  DECIMAL(9,2), -- attribute
 NOT FINAL;          -- Allows subtypes
+
+CREATE TYPE Bar UNDER Foo FINAL; -- subtype inherits supertype attributes
+
+CREATE TABLE Foobar(
+  Whatever Bar,
+  );
+
+BEGIN
+  DECLARE a = Bar; -- temp var
+  SET a = Bar(); -- calls the constructor
+  SET a = a.Title('whatever'); --mutator functionality
+  SET a = a.Cost(9.99);
+  INSERT INTO Foobar VALUES (a);
+END
     ```
+
+* You can also create UDT from `collection` types like arr
+
+####NULL values
+* field that does not contain data values
+* in Numeric field, null != 0
+* in character field, null != ''
+
+####Constraints
+* restrictions for data that can be entered in a database table
+
+#### SQL in CLIENT/SERVER System
