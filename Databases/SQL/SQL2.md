@@ -133,3 +133,41 @@ CREATE TABLE CUSTOMER (
 * a *pointer* to something
 
 ######User defined types
+* data type designed to match with oop host language object type
+* gots attributes and methods:
+  * `public` -- *available to all users of UDT*
+  * `private` -- *available to UDT itself*
+  * `protected` -- *available to UDT itself and its subtypes*
+* behaves like a __class__
+* There are two types of UDT:
+  *__Distinct types___:
+    * Simpler than __Structured types__
+    * a single data type
+    * constructed from one of the predefined data types, called *source* type
+    * Multiple distinct types that are constructed from single source type are not directly comparable - they are `distinct`
+    ```sql
+    CREATE DISTINCT TYPE USdollar AS DECIMAL (9,2);
+    ```
+    ```sql
+    CREATE TABLE Invoice(
+      InvId  INTEGER PRIMARY KEY,
+      Total USdollar,
+    );
+    ```
+  *__Structured types__:
+    * list of attribute definitions and methods
+      * `constors`
+        * When creating structured udt, dbms automatically makes a constructor for it, to initialize the udt attributes
+      * `mutators` and `observers`
+        * `mutator` changes the attribute value
+        * `observer` retrieve tha value of attribute
+          * you can invoke the `observer` in SELECT to retrieve the value from database
+      * `subtypes` and `supertypes`
+       * `maximal supertype` -- has no supertype
+       * `leaf subtype` -- has no subtypes
+    ```sql
+CREATE TYPE Foo AS  -- create UDT
+Title CHAR(40),     -- attribute
+COST  DECIMAL(9,2), -- attribute
+NOT FINAL;          -- Allows subtypes
+    ```
