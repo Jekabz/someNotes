@@ -168,4 +168,53 @@ startService(intent);
 
 ####Managing the lifecycle of a Service
 * __started__ service or a __bound__ service
-![pic]()
+* `started service`
+  * `started` service is created when another component calls `startService()`
+  * Service runs indefinately and must stop itself by `stopSelf()`
+  * Another component can stop the service by `stopService()`
+* `bound service`
+  * Created, when another component calls `bindService()`
+  * Client closes connection by `unbindService()`
+  * can have multiple clients bound to the same service
+  * When no clients are bound to the service, system destroys it
+
+######Implementing the lifecycle callbacks
+* not required to call supercllass implementation of callback methode
+```Java
+public class ExampleService extends Service {
+    int mStartMode;       // indicates how to behave if the service is killed
+    IBinder mBinder;      // interface for clients that bind
+    boolean mAllowRebind; // indicates whether onRebind should be used
+
+    @Override
+    public void onCreate() {
+        // The service is being created
+    }
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        // The service is starting, due to a call to startService()
+        return mStartMode;
+    }
+    @Override
+    public IBinder onBind(Intent intent) {
+        // A client is binding to the service with bindService()
+        return mBinder;
+    }
+    @Override
+    public boolean onUnbind(Intent intent) {
+        // All clients have unbound with unbindService()
+        return mAllowRebind;
+    }
+    @Override
+    public void onRebind(Intent intent) {
+        // A client is binding to the service with bindService(),
+        // after onUnbind() has already been called
+    }
+    @Override
+    public void onDestroy() {
+        // The service is no longer used and is being destroyed
+    }
+}
+```
+
+![pic](https://github.com/Jekabz/someNotes/blob/master/RESOURCES/PICTURES/Screenshot%20from%202016-04-23%2011:36:53.png)
