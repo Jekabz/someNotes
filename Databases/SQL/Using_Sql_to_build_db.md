@@ -9,4 +9,19 @@
 * `PRIMARY KEY` of any table should always be indexed
 
 * index fields you frequently use to access rows
-* index fields that have differentiation between rows 
+* index fields that have differentiation between rows
+* `INDEX` is not a part of SQL, and is DBMS specific
+* Depending on DBMS, `DROP INDEX` might also be possible
+
+----
+```SQL
+CREATE TABLE Foo(
+  Something     INTEGER      PRIMARY KEY,
+  SomethingElse VARCHAR(10)
+);
+
+ALTER TABLE Foo(
+  ADD COLUMN SomethingFoo VARCHAR(10);
+  DROP COLUMN SomehtingElse;
+);
+```

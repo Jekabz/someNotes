@@ -120,7 +120,7 @@ public class ExampleActivity extends Activity {
 }
 ```
 * Your implementation should always call the superclass implementation first
-* __activity lifecycle__ has 3 nested loops:
+* __activity lifecycle__ has 3 nested loops
   *__entire lifetime__
     * in between `onCreate()` and `onDestroy()`
     * does the setup in `onCreate()`
