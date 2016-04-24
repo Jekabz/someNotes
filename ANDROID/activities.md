@@ -18,6 +18,7 @@
 * in your subclass, implement callback methods (called by system)
 
 * `onCreate()`
+  * called when the activity is first created
   * initialize most important components of your Activity
   * call `setContentView()` to define the layout for UI
 * `onPause()`
@@ -75,13 +76,13 @@ startActivity(intent);
 
 ######Managing the Activity lifecycle
 * Activity can exist in 3 states:
-  * Resumed
+  * `Resumed`
     * The activity is in the foreground and has user focus
     * In other words, it is running
-  * Paused
+  * `Paused`
     * Another activity is in the foreground, but this one is still visible (the Another activity does not cover this activity fully)
     * Can be killed by system if low memory
-  * Stopped
+  * `Stopped`
     * The activity is completely obscured by another activity
 
 ######Implementing the lifecycle callbacks
@@ -119,16 +120,17 @@ public class ExampleActivity extends Activity {
     }
 }
 ```
+
 * Your implementation should always call the superclass implementation first
 * __activity lifecycle__ has 3 nested loops
-  *__entire lifetime__
+  * __entire lifetime__
     * in between `onCreate()` and `onDestroy()`
     * does the setup in `onCreate()`
     * release resources in `onDestroy`
-  *__visible lifetime__
+  * __visible lifetime__
     * in between `onStart()` and `onStop()`
     * this can happen multiole times in an entire lifetime
-  *__foreground lifetime__
+  * __foreground lifetime__
     * in between `onResume()` and `onPause()`
     * during this time, activity is in front of all other activities and has the user focus
     * Because this state can transition often, the code in `onResume()` and `onPause()` should be fairly lightweight
@@ -144,3 +146,33 @@ public class ExampleActivity extends Activity {
 
 ######Handling the configuration changes
 * when configuration changes (sreen rotation, language etc), android recreates the activity by calling `onDestroy()` and `onCreate()`
+
+----
+```Java
+Bundle savedInstanceState
+```
+* `Bundle` is a key value that maps string keys and parcel types
+```Java
+setContentView(R.layout.activity_main);
+```
+* that gets the UI to show up on the screen
+* `activity_main` refers to `activity_main.xml`
+
+######Handling user input
+* need an event listener
+* `event listener` responds to an event in the Android system
+* most common are touch and keyboard events
+* `keyboard event`
+  * key has been pressed
+* `touch event`
+  * user taps the widget:
+    * button
+    * ImageButton
+    * EditText
+    * Spinner
+    * List item row
+    * Menu item
+  * widget has to have `clickable` property set to __true__
+
+######Event handler
+*
